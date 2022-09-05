@@ -27,9 +27,10 @@ set backspace=indent,eol,start
 set history=500
 set showcmd
 set showmode
-set nowrap
+set wrap                 "字數過長時換行
 set autowrite
 set mouse=a
+set incsearch            "在關鍵字尚未完全輸入完畢前就顯示結果
 
 "#######################################################
 " Show trailing space
