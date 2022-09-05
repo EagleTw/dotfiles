@@ -30,6 +30,13 @@ set showmode
 set nowrap
 set autowrite
 set mouse=a
+
+"#######################################################
+" Show trailing space
+syn match WhiteSpace "\s\+$" containedin=ALL conceal cchar=▣
+set conceallevel=2 
+set concealcursor=nv
+highlight Conceal ctermfg=red
  
 "#######################################################
 " Color
