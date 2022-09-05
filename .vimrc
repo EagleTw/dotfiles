@@ -31,6 +31,7 @@ set wrap                 "字數過長時換行
 set autowrite
 set mouse=a
 set incsearch            "在關鍵字尚未完全輸入完畢前就顯示結果
+filetype indent on       "啟用依照檔案類型，決定自動縮排樣式的功能
 
 "#######################################################
 " Show trailing space
