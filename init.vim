@@ -36,7 +36,6 @@ call plug#begin()
   Plug 'morhetz/gruvbox'            " Color scheme
   Plug 'ryanoasis/vim-devicons'
   Plug 'vim-airline/vim-airline'    " Colorfull status bar
-  Plugin 'vim-airline/vim-airline-themes'
 
   "Plug 'Fugitive'                  " git in vim
   Plug 'SirVer/ultisnips'
