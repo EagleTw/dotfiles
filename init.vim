@@ -31,16 +31,19 @@ set ttyfast                 " Speed up scrolling in Vim
 call plug#begin()
  " Plugin Section
  
- " Appreadence 
+ " Apprearence 
   Plug 'dracula/vim'
-  Plug 'morhetz/gruvbox'
+  Plug 'morhetz/gruvbox'            " Color scheme
   Plug 'ryanoasis/vim-devicons'
+  Plug 'vim-airline/vim-airline'    " Colorfull status bar
+  Plugin 'vim-airline/vim-airline-themes'
 
-   Plug 'SirVer/ultisnips'
-   Plug 'honza/vim-snippets'
-   Plug 'scrooloose/nerdtree'
-   Plug 'preservim/nerdcommenter'
-   Plug 'mhinz/vim-startify'
+  "Plug 'Fugitive'                  " git in vim
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'scrooloose/nerdtree'
+  Plug 'preservim/nerdcommenter'
+  Plug 'mhinz/vim-startify'
 call plug#end()
 
 " color schemes
