@@ -11,7 +11,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="miloshadzic"
+ZSH_THEME="cypher"
 # 隱藏用戶名稱(user@hostname)
 DEFAULT_USER=`id -un`
 # 含有icon的字型
@@ -109,4 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vim="/opt/homebrew/bin/nvim"
+
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/xpack-riscv-none-elf-gcc-12.2.0-1/bin:$PATH"
+ctags=/opt/homebrew/bin/ctags
