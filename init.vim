@@ -60,3 +60,9 @@ nnoremap <F5> :exec 'NERDTreeToggle' <CR>
 let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" Show trailing space                                                               
+syn match WhiteSpace "\s\+$" containedin=ALL conceal cchar=▣                                                                                                 
+set conceallevel=2                                                                  
+set concealcursor=nv                                                                
+highlight Conceal ctermfg=red
