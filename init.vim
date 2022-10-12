@@ -20,7 +20,7 @@ set cc=80                  " set an 80 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
+"set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
@@ -52,7 +52,8 @@ colorscheme gruvbox
 
 " File browser
 let NERDTreeShowHidden=6
-" au VimEnter *  NERDTree  " auto open NERDTree when open neovim
+let g:NERDTreeWinPos = "right"
+au VimEnter *  NERDTree  " auto open NERDTree when open neovim
 nnoremap <F5> :exec 'NERDTreeToggle' <CR>
 
 " AirLine Setting 
