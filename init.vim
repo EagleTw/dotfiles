@@ -50,11 +50,14 @@ call plug#end()
 " colorscheme dracula
 colorscheme gruvbox
 
+"==============================================================================
 " File browser
 let NERDTreeShowHidden=6
 let g:NERDTreeWinPos = "right"
-au VimEnter *  NERDTree  " auto open NERDTree when open neovim
+"au VimEnter *  NERDTree  " auto open NERDTree when open neovim
 nnoremap <F5> :exec 'NERDTreeToggle' <CR>
+
+"==============================================================================
 
 " AirLine Setting 
 let g:airline_theme='sobrio'
