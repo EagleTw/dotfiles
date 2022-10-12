@@ -43,6 +43,8 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'mhinz/vim-startify'
+  Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " color schemes
@@ -51,21 +53,30 @@ call plug#end()
 colorscheme gruvbox
 
 "==============================================================================
-" File browser
+" NERDTree Settings
 let NERDTreeShowHidden=6
 let g:NERDTreeWinPos = "right"
 "au VimEnter *  NERDTree  " auto open NERDTree when open neovim
 nnoremap <F5> :exec 'NERDTreeToggle' <CR>
 
 "==============================================================================
-
 " AirLine Setting 
 let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+"==============================================================================
 " Show trailing space                                                               
 syn match WhiteSpace "\s\+$" containedin=ALL conceal cchar=▣                                                                                                 
 set conceallevel=2                                                                  
 set concealcursor=nv                                                                
 highlight Conceal ctermfg=red
+
+"==============================================================================
+"keep the sign gutter open
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
+" show errors or warnings in my statusline
+let g:airline#extensions#ale#enabled = 1
