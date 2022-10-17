@@ -50,8 +50,8 @@ call plug#end()
 
 " color schemes
 " colorscheme evening
-" colorscheme dracula
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme sobrio
 
 "==============================================================================
 " NERDTree Settings
