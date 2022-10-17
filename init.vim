@@ -39,12 +39,9 @@ call plug#begin()
   Plug 'elvessousa/sobrio'
 
   "Plug 'Fugitive'                  " git in vim
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'mhinz/vim-startify'
-  Plug 'dense-analysis/ale'
 
 call plug#end()
 
