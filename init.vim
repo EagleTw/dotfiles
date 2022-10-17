@@ -30,8 +30,8 @@ set ttyfast                 " Speed up scrolling in Vim
 
 call plug#begin()
  " Plugin Section
- 
- " Apprearence 
+
+ " Apprearence
   Plug 'dracula/vim'
   Plug 'morhetz/gruvbox'            " Color scheme
   Plug 'ryanoasis/vim-devicons'
