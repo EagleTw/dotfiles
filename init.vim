@@ -32,7 +32,7 @@ call plug#begin()
  " Plugin Section
 
  " Apprearence
-  Plug 'dracula/vim'
+  Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
   Plug 'ryanoasis/vim-devicons'
   Plug 'vim-airline/vim-airline'    " Colorfull status bar
@@ -64,6 +64,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 "==============================================================================
-" Show trailing space                                                               
+" Show trailing space
 set list
 set listchars+=trail:▣
+
+"Remove all trailing whitespace by pressing
+nnoremap <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
