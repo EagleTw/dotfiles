@@ -70,19 +70,3 @@ let g:airline#extensions#tabline#enabled = 1
 " Show trailing space                                                               
 set list
 set listchars+=trail:▣
-
-"-----------------------------------------------------------------------------
-" plugin - ale.vim
-"-----------------------------------------------------------------------------
-"keep the sign gutter open
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-
-" show errors or warnings in my statusline
-let g:airline#extensions#ale#enabled = 1
-
-" use quickfix list instead of the loclist
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-"------------------------END ale.vim--------------------------------------
