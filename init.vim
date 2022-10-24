@@ -1,11 +1,11 @@
 set t_Co=256
 set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
-set ignorecase              " case insensitive 
-set mouse=v                 " middle-click paste with 
-set hlsearch                " highlight search 
+set showmatch               " show matching
+set ignorecase              " case insensitive
+set mouse=v                 " middle-click paste with
+set hlsearch                " highlight search
 set incsearch               " incremental search
-set tabstop=2               " number of columns occupied by a tab 
+set tabstop=2               " number of columns occupied by a tab
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
@@ -48,6 +48,10 @@ call plug#begin()
   Plug 'preservim/nerdcommenter'
   Plug 'mhinz/vim-startify'
 
+  "For language support
+  Plug 'cespare/vim-toml'
+  Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " color schemes
@@ -63,7 +67,7 @@ let g:NERDTreeWinPos = "right"
 nnoremap <F5> :exec 'NERDTreeToggle' <CR>
 
 "==============================================================================
-" AirLine Setting 
+" AirLine Setting
 let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -75,3 +79,21 @@ set listchars+=trail:▣
 
 "Remove all trailing whitespace by pressing
 nnoremap <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+"==============================================================================
+" Ale
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let g:ale_sign_error = '✗'
+" let g:ale_sign_warning = '⚠️'
+
+" remove_trailing_lines 刪除文件末尾的所有空白行
+" trim_whitespace 刪除每行末尾的所有尾隨空格字元
+let g:ale_fixers = {
+    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+inoremap <silent><expr><TAB>
+    \ pumvisible() ? “\<C-n>” : “\<TAB>”
