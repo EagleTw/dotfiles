@@ -92,8 +92,8 @@ let g:ale_sign_error = '✗'
 
 " remove_trailing_lines 刪除文件末尾的所有空白行
 " trim_whitespace 刪除每行末尾的所有尾隨空格字元
-let g:ale_fixers = {
-    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-\}
+" let g:ale_fixers = {
+"     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \}
 inoremap <silent><expr><TAB>
     \ pumvisible() ? “\<C-n>” : “\<TAB>”
