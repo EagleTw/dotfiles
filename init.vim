@@ -62,7 +62,7 @@ colorscheme sobrio
 "==============================================================================
 " NERDTree Settings
 let NERDTreeShowHidden=6
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 "au VimEnter *  NERDTree  " auto open NERDTree when open neovim
 nnoremap <F5> :exec 'NERDTreeToggle' <CR>
 
