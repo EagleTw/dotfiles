@@ -95,5 +95,3 @@ let g:ale_sign_error = '✗'
 " let g:ale_fixers = {
 "     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 " \}
-inoremap <silent><expr><TAB>
-    \ pumvisible() ? “\<C-n>” : “\<TAB>”
