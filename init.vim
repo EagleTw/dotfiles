@@ -13,7 +13,7 @@ set autoindent              " indent a new line the same amount as the line just
 
 
 " Reletive nu settings
-" set number                  " add line numbers
+set number                  " add line numbers
 " augroup numbertoggle
 "   autocmd!
 "   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
