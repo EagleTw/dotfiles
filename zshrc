@@ -112,7 +112,23 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim="/opt/homebrew/bin/nvim"
+alias c="cd .."
+alias cc="cd ../.."
+alias ccc="cd ../../.."
+
+alias git-log="git log --graph --all --pretty=oneline --abbrev-commit"
+alias qtcreater="/Applications/Qt\ Creator.app/Contents/MacOS/Qt\ Creator"
 
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/xpack-riscv-none-elf-gcc-12.2.0-1/bin:$PATH"
+#export PATH="$HOME/xpack-riscv-none-elf-gcc-11.3.0-1/bin:$PATH"   # For risc-v gnu toolchain
+
+# ctags
 ctags=/opt/homebrew/bin/ctags
+
+# For gtest
+export CPLUS_INCLUDE_PATH="/usr/local/include"
+export LIBRARY_PATH="/usr/local/lib"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
