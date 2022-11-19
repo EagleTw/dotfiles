@@ -47,6 +47,7 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'mhinz/vim-startify'
+  Plug 'preservim/tagbar'
 
   "For language support
   Plug 'cespare/vim-toml'
@@ -79,6 +80,9 @@ set listchars+=trail:▣
 
 "Remove all trailing whitespace by pressing
 nnoremap <F6> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" F4 trun on tagbar
+nmap <F4> :TagbarToggle <CR>
 
 "==============================================================================
 " Ale
