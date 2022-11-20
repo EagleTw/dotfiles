@@ -94,34 +94,47 @@ let g:ale_sign_error = '✗'
 " \}
 
 " =========  Auto Shell comment.
-autocmd BufNewFile *.sh,*.py,*.[ch],*.cpp exec ":call SetTitle()"
+autocmd BufNewFile *.sh,*.py,*.[ch],*.cpp,*.md exec ":call SetTitle()"
 func SetTitle()
 if expand("%:e") == 'sh'
- call setline(1,"#!/bin/bash")
- call setline(2,"#")
- call setline(3,"#**************************************************")
- call setline(4,"# Author:         ypprog                          *")
- call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
- call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
- call setline(7,"# Description:                                    *")
- call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
- call setline(9,"#**************************************************")
- call setline(10,"")
- call setline(11,"")
+  call setline(1,"#!/bin/bash")
+  call setline(2,"#")
+  call setline(3,"#**************************************************")
+  call setline(4,"# Author:         ypprog                          *")
+  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
+  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
+  call setline(7,"# Description:                                    *")
+  call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
+  call setline(9,"#**************************************************")
+  call setline(10,"")
+  call setline(11,"")
 endif
 if expand("%:e") == 'py'
-    call setline(1, "\# -*- coding: utf-8 -*-")
-    call setline(2,"#")
-    call setline(3,"#**************************************************")
-    call setline(4,"# Author:         ypprog                          *")
-    call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
-    call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
-    call setline(7,"# Description:                                    *")
-    call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
-    call setline(9,"#**************************************************")
-    call setline(10,"")
-    call setline(11,"")
+  call setline(1, "\# -*- coding: utf-8 -*-")
+  call setline(2,"#")
+  call setline(3,"#**************************************************")
+  call setline(4,"# Author:         ypprog                          *")
+  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
+  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
+  call setline(7,"# Description:                                    *")
+  call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
+  call setline(9,"#**************************************************")
+  call setline(10,"")
+  call setline(11,"")
 endif
+if expand("%:e") == 'md'
+  call setline(2,"#")
+  call setline(3,"#**************************************************")
+  call setline(4,"# Author:         ypprog                          *")
+  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
+  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
+  call setline(7,"# Description:                                    *")
+  call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
+  call setline(9,"#**************************************************")
+  call setline(10,"")
+  call setline(11,"")
+endif
+
 autocmd BufNewFile * normal G
 endfunc
 
