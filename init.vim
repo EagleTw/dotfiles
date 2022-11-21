@@ -40,6 +40,7 @@ call plug#begin()
   """ Aesthetics - Colorschemes
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
+  Plug 'hzchirs/vim-material'       " material color themes
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
@@ -64,10 +65,10 @@ call plug#end()
 "#######################################################
 " Colorscheme
 "#######################################################
-" color schemes
-" colorscheme evening
-" colorscheme gruvbox
-colorscheme sobrio
+" colo evening
+" colo gruvbox
+" colo sobrio
+colo vim-material
 
 "#######################################################
 " NERDTree Settings
