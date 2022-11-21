@@ -28,6 +28,9 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
+"#######################################################
+" Plugin Settings
+"#######################################################
 call plug#begin()
  " Plugin Section
 
@@ -57,10 +60,6 @@ call plug#end()
 " colorscheme evening
 " colorscheme gruvbox
 colorscheme sobrio
-
-"#######################################################
-" Plugin Settings
-"#######################################################
 
 "#######################################################
 " NERDTree Settings
@@ -149,11 +148,10 @@ endfunc
 "#######################################################
 " F1-F12_HOTKEY_SETTINGS:
 "#######################################################
-
 nmap <F1> :exec 'NERDTreeToggle' <CR>
 nmap <F2> :TagbarToggle <CR>
 
-"Remove all trailing whitespace by pressing
+"Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 
