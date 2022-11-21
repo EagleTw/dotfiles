@@ -28,26 +28,33 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
+""" Trailing space
+set list
+set listchars+=trail:▣,tab:»-
+
 "#######################################################
 " Plugin Settings
 "#######################################################
 call plug#begin()
  " Plugin Section
 
- " Apprearence
+  """ Aesthetics - Colorschemes
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
+
+  """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
   Plug 'vim-airline/vim-airline'    " Colorfull status bar
   Plug 'elvessousa/sobrio'
 
+  """ Function
   "Plug 'Fugitive'                  " git in vim
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'mhinz/vim-startify'
   Plug 'preservim/tagbar'
 
-  "For language support
+  """For language support
   Plug 'cespare/vim-toml'
   Plug 'dense-analysis/ale'
 
@@ -75,11 +82,6 @@ let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-"#######################################################
-" Show trailing space
-"#######################################################
-set list
-set listchars+=trail:▣
 
 "#######################################################
 " Ale
