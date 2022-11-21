@@ -172,3 +172,15 @@ nmap <F3> :TagbarToggle <CR>
 
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+"#######################################################
+" switch between splits using ctrl + {h,j,k,l}
+"#######################################################
+inoremap <C-h> <C-\><C-N><C-w>h
+inoremap <C-j> <C-\><C-N><C-w>j
+inoremap <C-k> <C-\><C-N><C-w>k
+inoremap <C-l> <C-\><C-N><C-w>l
+nnoremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
