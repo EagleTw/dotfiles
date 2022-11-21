@@ -29,6 +29,14 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 "#######################################################
+" Colorscheme 
+"#######################################################
+" color schemes
+" colorscheme evening
+" colorscheme gruvbox
+colorscheme sobrio
+
+"#######################################################
 " Plugin Settings
 "#######################################################
 
@@ -54,10 +62,6 @@ call plug#begin()
 
 call plug#end()
 
-" color schemes
-" colorscheme evening
-" colorscheme gruvbox
-colorscheme sobrio
 
 "#######################################################
 " NERDTree Settings
