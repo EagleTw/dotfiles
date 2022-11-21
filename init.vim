@@ -46,8 +46,10 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'    " Colorfull status bar
   Plug 'elvessousa/sobrio'
 
-  """ Function
-  "Plug 'Fugitive'                  " git in vim
+  """ Functionalities
+  Plug 'mhinz/vim-startify'         " cool start up screen
+  Plug 'tpope/vim-fugitive'         " git support
+  Plug 'psliwka/vim-smoothie'       " some very smooth ass scrolling
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'mhinz/vim-startify'
@@ -60,7 +62,7 @@ call plug#begin()
 call plug#end()
 
 "#######################################################
-" Colorscheme 
+" Colorscheme
 "#######################################################
 " color schemes
 " colorscheme evening
