@@ -148,8 +148,8 @@ endfunc
 "#######################################################
 " F1-F12_HOTKEY_SETTINGS:
 "#######################################################
-nmap <F1> :exec 'NERDTreeToggle' <CR>
-nmap <F2> :TagbarToggle <CR>
+nmap <F2> :exec 'NERDTreeToggle' <CR>
+nmap <F3> :TagbarToggle <CR>
 
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
