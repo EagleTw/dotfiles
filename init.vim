@@ -40,12 +40,11 @@ call plug#begin()
   """ Aesthetics - Colorschemes
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
-  Plug 'hzchirs/vim-material'       " material color themes
+  Plug 'elvessousa/sobrio'
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
   Plug 'vim-airline/vim-airline'    " Colorfull status bar
-  Plug 'elvessousa/sobrio'
 
   """ Functionalities
   Plug 'mhinz/vim-startify'         " cool start up screen
@@ -67,8 +66,7 @@ call plug#end()
 "#######################################################
 " colo evening
 " colo gruvbox
-" colo sobrio
-colo vim-material
+colo sobrio
 
 "#######################################################
 " NERDTree Settings
