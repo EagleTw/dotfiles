@@ -1,3 +1,6 @@
+"#######################################################
+" Basic Settings
+"#######################################################
 set t_Co=256
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching
@@ -10,18 +13,10 @@ set softtabstop=2           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-
-
-" Reletive nu settings
+filetype indent on          "啟用依照檔案類型，決定自動縮排樣式的功能
 set number                  " add line numbers
-" augroup numbertoggle
-"   autocmd!
-"   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-"   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-" augroup END
-
 set wildmode=longest,list   " get bash-like tab completions
-set cc=80                  " set an 80 column border for good coding style
+set cc=80                   " set an 80 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
@@ -32,6 +27,10 @@ set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
+
+"#######################################################
+" Plugin Settings
+"#######################################################
 
 call plug#begin()
  " Plugin Section
@@ -60,25 +59,29 @@ call plug#end()
 " colorscheme gruvbox
 colorscheme sobrio
 
-"==============================================================================
+"#######################################################
 " NERDTree Settings
+"#######################################################
 let NERDTreeShowHidden=6
 let g:NERDTreeWinPos = "left"
 "au VimEnter *  NERDTree  " auto open NERDTree when open neovim
 
-"==============================================================================
+"#######################################################
 " AirLine Setting
+"#######################################################
 let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-"==============================================================================
+"#######################################################
 " Show trailing space
+"#######################################################
 set list
 set listchars+=trail:▣
 
-"==============================================================================
+"#######################################################
 " Ale
+"#######################################################
 set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_enabled = 1
 let g:ale_completion_autoimport = 1
@@ -93,7 +96,9 @@ let g:ale_sign_error = '✗'
 "     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 " \}
 
-" =========  Auto Shell comment.
+"#######################################################
+" Auto Shell comment.
+"#######################################################
 autocmd BufNewFile *.sh,*.py,*.[ch],*.cpp,*.md exec ":call SetTitle()"
 func SetTitle()
 if expand("%:e") == 'sh'
@@ -138,9 +143,9 @@ endif
 autocmd BufNewFile * normal G
 endfunc
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"#######################################################
 " F1-F12_HOTKEY_SETTINGS:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"#######################################################
 
 nmap <F1> :exec 'NERDTreeToggle' <CR>
 nmap <F2> :TagbarToggle <CR>
