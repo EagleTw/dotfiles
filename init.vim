@@ -13,7 +13,7 @@ set softtabstop=2           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-filetype indent on          "啟用依照檔案類型，決定自動縮排樣式的功能
+filetype indent on          " 啟用依照檔案類型，決定自動縮排樣式的功能
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
