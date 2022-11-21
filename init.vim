@@ -47,6 +47,7 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'    " Colorfull status bar
 
   """ Functionalities
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'mhinz/vim-startify'         " cool start up screen
   Plug 'tpope/vim-fugitive'         " git support
   Plug 'psliwka/vim-smoothie'       " some very smooth ass scrolling
@@ -82,7 +83,6 @@ let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-
 "#######################################################
 " Ale
 "#######################################################
@@ -99,6 +99,34 @@ let g:ale_sign_error = '✗'
 " let g:ale_fixers = {
 "     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 " \}
+
+"#######################################################
+" Navigate snippet placeholders using tab
+"#######################################################
+let g:coc_snippet_next = '<Tab>'
+let g:coc_snippet_prev = '<S-Tab>'
+
+" list of the extensions to make sure are always installed
+let g:coc_global_extensions = [
+            \'coc-yank',
+            \'coc-pairs',
+            \'coc-json',
+            \'coc-css',
+            \'coc-html',
+            \'coc-tsserver',
+            \'coc-yaml',
+            \'coc-lists',
+            \'coc-snippets',
+            \'coc-pyright',
+            \'coc-clangd',
+            \'coc-prettier',
+            \'coc-xml',
+            \'coc-syntax',
+            \'coc-git',
+            \'coc-marketplace',
+            \'coc-highlight',
+            \'coc-sh',
+            \]
 
 "#######################################################
 " custom banner
