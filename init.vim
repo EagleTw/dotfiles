@@ -28,18 +28,6 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
-"#######################################################
-" Colorscheme 
-"#######################################################
-" color schemes
-" colorscheme evening
-" colorscheme gruvbox
-colorscheme sobrio
-
-"#######################################################
-" Plugin Settings
-"#######################################################
-
 call plug#begin()
  " Plugin Section
 
@@ -62,6 +50,17 @@ call plug#begin()
 
 call plug#end()
 
+"#######################################################
+" Colorscheme 
+"#######################################################
+" color schemes
+" colorscheme evening
+" colorscheme gruvbox
+colorscheme sobrio
+
+"#######################################################
+" Plugin Settings
+"#######################################################
 
 "#######################################################
 " NERDTree Settings
