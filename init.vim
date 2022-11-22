@@ -50,6 +50,8 @@ call plug#begin()
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
   Plug 'NLKNguyen/papercolor-theme'
+  Plug 'cocopon/iceberg.vim'
+
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
@@ -74,8 +76,11 @@ call plug#end()
 "#######################################################
 " Colorscheme
 "#######################################################
-" colo evening
-colo gruvbox
+" colo desert
+" colo gruvbox
+" colo PaperColor
+" colo everforest
+colo iceberg
 
 "#######################################################
 " NERDTree Settings
