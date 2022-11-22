@@ -42,6 +42,7 @@ call plug#begin()
   """ Aesthetics - Colorschemes
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
+  Plug 'NLKNguyen/papercolor-theme'
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
