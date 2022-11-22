@@ -1,3 +1,5 @@
+" Reference: https://github.com/Blacksuan19/init.nvim
+
 "#######################################################
 " Basic Settings
 "#######################################################
@@ -103,6 +105,7 @@ let g:ale_sign_error = '✗'
 "#######################################################
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
+"let g:coc_disable_startup_warning = 1    " diable warning
 
 " list of the extensions to make sure are always installed
 let g:coc_global_extensions = [
