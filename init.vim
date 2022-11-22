@@ -1,3 +1,10 @@
+"**************************************************
+" Author:         ypprog                          *
+" E-mail:         pan.yiping.fi@gmail.com         *
+" Date:           2022-11-22                      *
+" Description:                                    *
+" Copyright 2022 by ypprog. All Rights Reserved   *
+"**************************************************
 " Reference: https://github.com/Blacksuan19/init.nvim
 
 "#######################################################
