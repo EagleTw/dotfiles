@@ -38,7 +38,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 """ Trailing space
-set list listchars=trail:▣,tab:»-
+set list listchars=trail:▣
 
 "#######################################################
 " Plugin Settings
