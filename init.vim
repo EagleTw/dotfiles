@@ -49,8 +49,8 @@ call plug#begin()
   """ Aesthetics - Colorschemes
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
-  Plug 'NLKNguyen/papercolor-theme'
   Plug 'cocopon/iceberg.vim'
+  Plug 'davidosomething/vim-colors-meh' " Very minimal color
 
 
   """ Aesthetics - Others
@@ -78,9 +78,8 @@ call plug#end()
 "#######################################################
 " colo desert
 " colo gruvbox
-" colo PaperColor
-" colo everforest
-colo iceberg
+" colo iceberg
+color meh
 
 "#######################################################
 " NERDTree Settings
