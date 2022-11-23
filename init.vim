@@ -6,6 +6,7 @@
 " Copyright 2022 by ypprog. All Rights Reserved   *
 "**************************************************
 " Reference: https://github.com/Blacksuan19/init.nvim
+" https://github.com/mcchrish/vim-no-color-collections
 
 "#######################################################
 " Basic Settings
@@ -51,6 +52,7 @@ call plug#begin()
   Plug 'morhetz/gruvbox'            " Color scheme
   Plug 'cocopon/iceberg.vim'
   Plug 'davidosomething/vim-colors-meh' " Very minimal color
+  Plug 'aditya-azad/candle-grey'    " Minimal grey color
 
 
   """ Aesthetics - Others
@@ -78,8 +80,10 @@ call plug#end()
 "#######################################################
 " colo desert
 " colo gruvbox
-" colo iceberg
-color meh
+colo iceberg
+" color meh
+" colo candle-grey-transparent
+" colo candle-grey
 
 "#######################################################
 " NERDTree Settings
