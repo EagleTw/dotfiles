@@ -195,13 +195,13 @@ if expand("%:e") == 'py'
 endif
 if expand("%:e") == 'md'
   call setline(2,"#")
-  call setline(3,"#**************************************************")
-  call setline(4,"# Author:         ypprog                          *")
-  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
-  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
-  call setline(7,"# Description:                                    *")
-  call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
-  call setline(9,"#**************************************************")
+  call setline(3,"#************************************************** <br>")
+  call setline(4,"# Author:         ypprog                          * <br>")
+  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         * <br>")
+  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      * <br>")
+  call setline(7,"# Description:                                    * <be>")
+  call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   * <br>")
+  call setline(9,"#************************************************** <br>")
   call setline(10,"")
   call setline(11,"")
 endif
