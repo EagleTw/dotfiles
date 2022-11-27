@@ -39,8 +39,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 """ Trailing space
-set list
-set listchars=trail:▣
+set list listchars=trail:▣
 
 "#######################################################
 " Plugin Settings
@@ -54,7 +53,7 @@ call plug#begin()
   Plug 'cocopon/iceberg.vim'
   Plug 'davidosomething/vim-colors-meh' " Very minimal color
   Plug 'aditya-azad/candle-grey'    " Minimal grey color
-  Plug 'kadekillary/skull-vim'
+
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
@@ -82,10 +81,9 @@ call plug#end()
 " colo desert
 " colo gruvbox
 " colo iceberg
-colo meh
+color meh
 " colo candle-grey-transparent
 " colo candle-grey
-" colo skull
 
 "#######################################################
 " NERDTree Settings
@@ -97,7 +95,7 @@ let g:NERDTreeWinPos = "left"
 "#######################################################
 " AirLine Setting
 "#######################################################
-let g:airline_theme='sobrio'
+" let g:airline_theme='sobrio'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -196,15 +194,16 @@ if expand("%:e") == 'py'
   call setline(11,"")
 endif
 if expand("%:e") == 'md'
-  call setline(1,"//**************************************************")
-  call setline(2,"// Author:         ypprog                          *")
-  call setline(3,"// E-mail:         pan.yiping.fi@gmail.com         *")
-  call setline(4,"// Date:           ".strftime("%Y-%m-%d")."                      *")
-  call setline(5,"// Description:                                    *")
-  call setline(6,"// Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
-  call setline(7,"//**************************************************")
-  call setline(8,"")
-  call setline(9,"")
+  call setline(2,"#")
+  call setline(3,"#**************************************************")
+  call setline(4,"# Author:         ypprog                          *")
+  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
+  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
+  call setline(7,"# Description:                                    *")
+  call setline(8,"# Copyright ".strftime("%Y"). " by ypprog. All Rights Reserved   *")
+  call setline(9,"#**************************************************")
+  call setline(10,"")
+  call setline(11,"")
 endif
 
 autocmd BufNewFile * normal G
