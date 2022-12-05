@@ -80,8 +80,8 @@ call plug#end()
 "#######################################################
 " colo desert
 " colo gruvbox
-" colo iceberg
-color meh
+colo iceberg
+" color meh
 " colo candle-grey-transparent
 " colo candle-grey
 
