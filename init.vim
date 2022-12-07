@@ -218,6 +218,9 @@ nmap <F3> :TagbarToggle <CR>
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
+" search selected in visual mode
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
 "#######################################################
 " switch between splits using ctrl + {h,j,k,l}
 "#######################################################
