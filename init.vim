@@ -26,7 +26,7 @@ set autoindent              " indent a new line the same amount as the line just
 filetype indent on          " 啟用依照檔案類型，決定自動縮排樣式的功能
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
-set colorcolumn=80,100      " set an 80 column border for good coding style
+set cc=80                   " set an 80 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
@@ -80,8 +80,8 @@ call plug#end()
 "#######################################################
 " colo desert
 " colo gruvbox
-colo iceberg
-" color meh
+" colo iceberg
+color meh
 " colo candle-grey-transparent
 " colo candle-grey
 
@@ -171,7 +171,7 @@ if expand("%:e") == 'sh'
   call setline(1,"#!/bin/bash")
   call setline(2,"#")
   call setline(3,"#**************************************************")
-  call setline(4,"# Author:         ypprog                          *")
+  call setline(4,"# Author:         ypaskell                        *")
   call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
   call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
   call setline(7,"# Description:                                    *")
@@ -184,7 +184,7 @@ if expand("%:e") == 'py'
   call setline(1, "\# -*- coding: utf-8 -*-")
   call setline(2,"#")
   call setline(3,"#**************************************************")
-  call setline(4,"# Author:         ypprog                          *")
+  call setline(4,"# Author:         ypaskell                        *")
   call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
   call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
   call setline(7,"# Description:                                    *")
@@ -196,7 +196,7 @@ endif
 if expand("%:e") == 'md'
   call setline(2,"#")
   call setline(3,"#************************************************* <br>")
-  call setline(4,"# Author:         ypprog                           <br>")
+  call setline(4,"# Author:         ypaskell                         <br>")
   call setline(5,"# E-mail:         pan.yiping.fi@gmail.com          <br>")
   call setline(6,"# Date:           ".strftime("%Y-%m-%d")."         <br>")
   call setline(7,"# Description:                                     <br>")
@@ -217,9 +217,6 @@ nmap <F3> :TagbarToggle <CR>
 
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-" search selected in visual mode
-vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 "#######################################################
 " switch between splits using ctrl + {h,j,k,l}
