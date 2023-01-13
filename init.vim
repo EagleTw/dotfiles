@@ -229,3 +229,6 @@ nnoremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Test seaching for slash
+command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
