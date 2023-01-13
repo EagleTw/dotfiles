@@ -230,5 +230,7 @@ noremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Test seaching for slash
+"#######################################################
+" Raw stirng search :SS <\foo> 
+"#######################################################
 command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
