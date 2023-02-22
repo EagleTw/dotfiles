@@ -53,6 +53,7 @@ call plug#begin()
   Plug 'cocopon/iceberg.vim'
   Plug 'davidosomething/vim-colors-meh' " Very minimal color
   Plug 'aditya-azad/candle-grey'    " Minimal grey color
+  Plug 'NLKNguyen/papercolor-theme'
 
 
   """ Aesthetics - Others
@@ -78,12 +79,13 @@ call plug#end()
 "#######################################################
 " Colorscheme
 "#######################################################
-" colo desert
-" colo gruvbox
-" colo iceberg
-color meh
-" colo candle-grey-transparent
-" colo candle-grey
+"colo desert
+"colo gruvbox
+"colo iceberg
+"color meh
+"colo candle-grey-transparent
+"colo candle-grey
+colo PaperColor
 
 "#######################################################
 " NERDTree Settings
