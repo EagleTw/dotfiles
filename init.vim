@@ -59,7 +59,6 @@ call plug#begin()
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
-  Plug 'vim-airline/vim-airline'    " Colorfull status bar
 
   """ Functionalities
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -94,13 +93,6 @@ call plug#end()
 let NERDTreeShowHidden=6
 let g:NERDTreeWinPos = "left"
 "au VimEnter *  NERDTree  " auto open NERDTree when open neovim
-
-"#######################################################
-" AirLine Setting
-"#######################################################
-" let g:airline_theme='sobrio'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 "#######################################################
 " Ale
