@@ -40,7 +40,7 @@ set ttyfast                 " Speed up scrolling in Vim
 
 """ Trailing space
 set list
-set listchars=trail:▣,tab:▷▷⋮
+set listchars=trail:▣,tab:▷▷
 
 "#######################################################
 " Plugin Settings
@@ -86,7 +86,7 @@ call plug#end()
 "color meh
 "colo candle-grey-transparent
 "colo candle-grey
-colo PaperColor
+"colo PaperColor
 
 "#######################################################
 " NERDTree Settings
