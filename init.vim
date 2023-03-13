@@ -22,6 +22,7 @@ set tabstop=2               " number of columns occupied by a tab
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
+set smarttab
 set showcmd
 set showmode
 set autoindent              " indent a new line the same amount as the line just typed
@@ -85,13 +86,12 @@ call plug#end()
 "#######################################################
 " Colorscheme
 "#######################################################
-"colo desert
 "colo gruvbox
 "colo iceberg
 "color meh
 "colo candle-grey-transparent
 "colo candle-grey
-"colo PaperColor
+colo PaperColor
 
 "#######################################################
 " NERDTree Settings
