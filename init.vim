@@ -22,15 +22,17 @@ set tabstop=2               " number of columns occupied by a tab
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
+set showcmd
+set showmode
 set autoindent              " indent a new line the same amount as the line just typed
-filetype indent on          " 啟用依照檔案類型，決定自動縮排樣式的功能
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
-filetype plugin indent on   "allow auto-indenting depending on file type
+
 syntax on                   " syntax highlighting
-set mouse=a                 " enable mouse click
 "set clipboard=unnamedplus   " using system clipboard
+filetype plugin indent on   "allow auto-indenting depending on file type
+filetype indent on          " 啟用依照檔案類型，決定自動縮排樣式的功能
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
@@ -143,71 +145,6 @@ let g:coc_global_extensions = [
             \'coc-highlight',
             \'coc-sh',
             \]
-
-"#######################################################
-" custom banner
-"#######################################################
-let g:startify_custom_header = [
- \ '',
- \ '                                                    ▟▙            ',
- \ '                                                    ▝▘            ',
- \ '            ██▃▅▇█▆▖  ▗▟████▙▖   ▄████▄   ██▄  ▄██  ██  ▗▟█▆▄▄▆█▙▖',
- \ '            ██▛▔ ▝██  ██▄▄▄▄██  ██▛▔▔▜██  ▝██  ██▘  ██  ██▛▜██▛▜██',
- \ '            ██    ██  ██▀▀▀▀▀▘  ██▖  ▗██   ▜█▙▟█▛   ██  ██  ██  ██',
- \ '            ██    ██  ▜█▙▄▄▄▟▊  ▀██▙▟██▀   ▝████▘   ██  ██  ██  ██',
- \ '            ▀▀    ▀▀   ▝▀▀▀▀▀     ▀▀▀▀       ▀▀     ▀▀  ▀▀  ▀▀  ▀▀',
- \ '',
- \ '',
- \ '',
- \]
-
-"#######################################################
-" Auto Shell comment.
-"#######################################################
-autocmd BufNewFile *.sh,*.py,*.[ch],*.cpp,*.md exec ":call SetTitle()"
-func SetTitle()
-if expand("%:e") == 'sh'
-  call setline(1,"#!/bin/bash")
-  call setline(2,"#")
-  call setline(3,"#**************************************************")
-  call setline(4,"# Author:         ypaskell                        *")
-  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
-  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
-  call setline(7,"# Description:                                    *")
-  call setline(8,"# Copyright ".strftime("%Y"). " by ypaskell. All Rights Reserved   *")
-  call setline(9,"#**************************************************")
-  call setline(10,"")
-  call setline(11,"")
-endif
-if expand("%:e") == 'py'
-  call setline(1, "\# -*- coding: utf-8 -*-")
-  call setline(2,"#")
-  call setline(3,"#**************************************************")
-  call setline(4,"# Author:         ypaskell                        *")
-  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com         *")
-  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."                      *")
-  call setline(7,"# Description:                                    *")
-  call setline(8,"# Copyright ".strftime("%Y"). " by ypaskell. All Rights Reserved   *")
-  call setline(9,"#**************************************************")
-  call setline(10,"")
-  call setline(11,"")
-endif
-if expand("%:e") == 'md'
-  call setline(2,"#")
-  call setline(3,"#************************************************* <br>")
-  call setline(4,"# Author:         ypaskell                         <br>")
-  call setline(5,"# E-mail:         pan.yiping.fi@gmail.com          <br>")
-  call setline(6,"# Date:           ".strftime("%Y-%m-%d")."         <br>")
-  call setline(7,"# Description:                                     <br>")
-  call setline(8,"# Copyright ".strftime("%Y"). " by ypaskell. All Rights Reserved <br>")
-  call setline(9,"#************************************************* <br>")
-  call setline(10,"")
-  call setline(11,"")
-endif
-
-autocmd BufNewFile * normal G
-endfunc
-
 "#######################################################
 " F1-F12_HOTKEY_SETTINGS:
 "#######################################################
