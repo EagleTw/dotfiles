@@ -15,7 +15,7 @@ set t_Co=256
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching
 set ignorecase              " case insensitive
-set mouse=v                 " middle-click paste with
+set mouse=a
 set hlsearch                " highlight search
 set incsearch               " incremental search
 set tabstop=2               " number of columns occupied by a tab
@@ -32,11 +32,15 @@ syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
 "set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
-set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
-" set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files.
+
+""" Cursor
+set cursorline
+set cursorcolumn
+hi CursorLine cterm=none ctermbg=DarkMagenta ctermfg=White
+hi CursorColumn cterm=none ctermbg=DarkMagenta ctermfg=White
+set hlsearch
 
 """ Trailing space
 set list
@@ -226,6 +230,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "#######################################################
-" Raw stirng search :SS <\foo> 
+" Raw stirng search :SS <\foo>
 "#######################################################
 command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
