@@ -53,6 +53,17 @@ set list
 set listchars=trail:▣,tab:▷▷
 
 "#######################################################
+" Colorscheme
+"#######################################################
+colo default
+"colo gruvbox
+"colo iceberg
+"color meh
+"colo candle-grey-transparent
+"colo candle-grey
+"colo PaperColor
+
+"#######################################################
 " Plugin Settings
 "#######################################################
 call plug#begin()
@@ -85,16 +96,6 @@ call plug#begin()
   Plug 'dense-analysis/ale'
 
 call plug#end()
-
-"#######################################################
-" Colorscheme
-"#######################################################
-"colo gruvbox
-"colo iceberg
-"color meh
-"colo candle-grey-transparent
-"colo candle-grey
-"colo PaperColor
 
 "#######################################################
 " NERDTree Settings
