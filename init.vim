@@ -18,14 +18,17 @@ set ignorecase              " case insensitive
 set mouse=a
 set hlsearch                " highlight search
 set incsearch               " incremental search
+
+""" setting for C++ google style
 set tabstop=2               " number of columns occupied by a tab
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
 set smarttab
+set autoindent              " indent a new line the same amount as the line just typed
+
 set showcmd
 set showmode
-set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
@@ -91,7 +94,7 @@ call plug#end()
 "color meh
 "colo candle-grey-transparent
 "colo candle-grey
-colo PaperColor
+"colo PaperColor
 
 "#######################################################
 " NERDTree Settings
