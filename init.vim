@@ -26,7 +26,6 @@ set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
 set smarttab
 set autoindent              " indent a new line the same amount as the line just typed
-set shiftround              " 使用 >> 或 << 时， 依shiftwidth 调整宽度
 
 set showcmd
 set showmode
