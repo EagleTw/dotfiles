@@ -26,6 +26,7 @@ set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
 set smarttab
 set autoindent              " indent a new line the same amount as the line just typed
+set shiftround              " 使用 >> 或 << 时， 依shiftwidth 调整宽度
 
 set showcmd
 set showmode
@@ -39,7 +40,7 @@ filetype plugin indent on   "allow auto-indenting depending on file type
 filetype indent on          " 啟用依照檔案類型，決定自動縮排樣式的功能
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
-" set spell                 " enable spell check (may need to download language package)
+"set spell                 " enable spell check (may need to download language package)
 
 """ Cursor
 set cursorline
