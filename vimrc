@@ -12,7 +12,8 @@ set nocompatible
 "#######################################################
 syntax enable
 set number
-set noruler
+"set noruler
+set cc=80
 set ignorecase
 set smartcase
 set incsearch
@@ -33,12 +34,10 @@ set mouse=a
 set incsearch            "在關鍵字尚未完全輸入完畢前就顯示結果
 filetype indent on       "啟用依照檔案類型，決定自動縮排樣式的功能
 
-"#######################################################
-" Show trailing space
-syn match WhiteSpace "\s\+$" containedin=ALL conceal cchar=▣
-set conceallevel=2 
-set concealcursor=nv
-highlight Conceal ctermfg=red
+
+""" Trailing space
+set list
+set listchars=trail:▣,tab:▷▷
  
 "#######################################################
 " Color
