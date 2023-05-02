@@ -2,8 +2,17 @@
 nvim_set:
 		cp init.vim ~/.config/nvim/init.vim 
 
-copy_dotfiles_here_and_push:
+nvim_upload:
 		cp ~/.config/nvim/init.vim init.vim
 		git add .
-		git commit -m "Add nvim settings"
+		git commit -m "Update nvim config"
+		git push
+
+bashrc_set:
+		cp ubuntu_bashrc ~/.bashrc
+
+bashrc_upload:
+		cp ~/.bashrc ubuntu_bashrc
+		git add .
+		git commit -m "Update bashrc settings"
 		git push
