@@ -1,6 +1,5 @@
 "#######################################################
 set nocompatible
-"#######################################################
 syntax enable
 "set number
 "set noruler
@@ -20,6 +19,7 @@ set history=500
 set showcmd
 set showmode
 set wrap                 "字數過長時換行
+set nu
 set autowrite
 set mouse=a
 set incsearch            "在關鍵字尚未完全輸入完畢前就顯示結果
@@ -32,8 +32,9 @@ set listchars=trail:▣,tab:▷▷
 
 "#######################################################
 " Color
+"#######################################################
 set t_Co=256
-colo desert
+colo pablo
 set cursorline
 hi CursorLine cterm=underline ctermbg=none ctermfg=none
 "set cursorcolumn
@@ -42,6 +43,7 @@ hi Search cterm=reverse ctermbg=none ctermfg=none
 
 "#######################################################
 " statusline
+"#######################################################
 set laststatus=2
 set statusline=%#filepath#[%{expand('%:p')}]%#filetype#[%{strlen(&fenc)?&fenc:&enc},\ %{&ff},\ %{strlen(&filetype)?&filetype:'plain'}]%#filesize#%{FileSize()}%{IsBinary()}%=%#position#%c,%l/%L\ [%3p%%]
 hi filepath cterm=none ctermbg=238 ctermfg=40
