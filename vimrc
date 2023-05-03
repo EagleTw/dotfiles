@@ -34,7 +34,8 @@ set listchars=trail:▣,tab:▷▷
 " Color
 "#######################################################
 set t_Co=256
-colo pablo
+" colo ron 
+colo gruvbox 
 set cursorline
 hi CursorLine cterm=underline ctermbg=none ctermfg=none
 "set cursorcolumn
@@ -42,18 +43,58 @@ set hlsearch
 hi Search cterm=reverse ctermbg=none ctermfg=none
 
 "#######################################################
-" statusline
+" Plugin Settings
 "#######################################################
-set laststatus=2
-set statusline=%#filepath#[%{expand('%:p')}]%#filetype#[%{strlen(&fenc)?&fenc:&enc},\ %{&ff},\ %{strlen(&filetype)?&filetype:'plain'}]%#filesize#%{FileSize()}%{IsBinary()}%=%#position#%c,%l/%L\ [%3p%%]
-hi filepath cterm=none ctermbg=238 ctermfg=40
-hi filetype cterm=none ctermbg=238 ctermfg=45
-hi filesize cterm=none ctermbg=238 ctermfg=225
-hi position cterm=none ctermbg=238 ctermfg=228
+call plug#begin()
+ " Plugin Section
+
+  """ Aesthetics - Colorschemes
+  Plug 'morhetz/gruvbox'            " Color scheme
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'dikiaap/minimalist'
+
+  """ Functionalities
+  Plug 'mhinz/vim-startify'         " cool start up screen
+  Plug 'scrooloose/nerdtree'
+  Plug 'preservim/nerdcommenter'
+  Plug 'octol/vim-cpp-enhanced-highlight'
+
+  """For language support
+  Plug 'cespare/vim-toml'
+  Plug 'dense-analysis/ale'
+
+call plug#end()
+
+"#######################################################
+" NERDTree Settings
+"#######################################################
+let NERDTreeShowHidden=6
+let g:NERDTreeWinPos = "left"
+"au VimEnter *  NERDTree  " auto open NERDTree when open neovim
+
+"#######################################################
+" Ale
+"#######################################################
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+let g:ale_sign_column_always = 1
+" let g:ale_fix_on_save = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '!'
+
+" remove_trailing_lines 刪除文件末尾的所有空白行
+" trim_whitespace 刪除每行末尾的所有尾隨空格字元
+" let g:ale_fixers = {
+"     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \}
 
 "#######################################################
 " F1-F12_HOTKEY_SETTINGS:
 "#######################################################
+nmap <F2> :exec 'NERDTreeToggle' <CR>
+nmap <F3> :TagbarToggle <CR>
 
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
