@@ -1,24 +1,15 @@
-"################### Magic vimrc ###################
-" ctrl+n Enable/disable mouse
-" ctrl+b Switch to text/binary
-" ctrl+j To utf-8 file
-" ctrl+t Convert tab to spaces
-" ctrl+l Toggle line breaking
-" ctrl+f Switch to full/simple
- 
 "#######################################################
 set nocompatible
- 
 "#######################################################
 syntax enable
-set number
+"set number
 "set noruler
 set cc=80
 set ignorecase
 set smartcase
 set incsearch
 set cindent
-set expandtab
+"set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -38,18 +29,17 @@ filetype indent on       "啟用依照檔案類型，決定自動縮排樣式的
 """ Trailing space
 set list
 set listchars=trail:▣,tab:▷▷
- 
+
 "#######################################################
 " Color
 set t_Co=256
-colo torte
+colo desert
 set cursorline
-set cursorcolumn
+hi CursorLine cterm=underline ctermbg=none ctermfg=none
+"set cursorcolumn
 set hlsearch
-hi CursorLine cterm=none ctermbg=DarkMagenta ctermfg=White
-hi CursorColumn cterm=none ctermbg=DarkMagenta ctermfg=White
 hi Search cterm=reverse ctermbg=none ctermfg=none
- 
+
 "#######################################################
 " statusline
 set laststatus=2
@@ -58,109 +48,10 @@ hi filepath cterm=none ctermbg=238 ctermfg=40
 hi filetype cterm=none ctermbg=238 ctermfg=45
 hi filesize cterm=none ctermbg=238 ctermfg=225
 hi position cterm=none ctermbg=238 ctermfg=228
-function IsBinary()
-    if (&binary == 0)
-        return ""
-    else
-        return "[Binary]"
-    endif
-endfunction
-function FileSize()
-    let bytes = getfsize(expand("%:p"))
-    if bytes <= 0
-        return "[Empty]"
-    endif
-    if bytes < 1024
-        return "[" . bytes . "B]"
-    elseif bytes < 1048576
-        return "[" . (bytes / 1024) . "KB]"
-    else
-        return "[" . (bytes / 1048576) . "MB]"
-    endif
-endfunction
- 
+
 "#######################################################
-" encode
-if has("multi_byte")
-    set fileencodings=utf-8,utf-16,big5,gb2312,gbk,gb18030,euc-jp,euc-kr,latin1
-else
-    echoerr "If +multi_byte is not included, you should compile Vim with big features."
-endif
- 
+" F1-F12_HOTKEY_SETTINGS:
 "#######################################################
-" shortcut
-" Toggle mouse
-" map <C-n> :call SwitchMouseMode()<CR>
-" map! <C-n> <Esc>:call SwitchMouseMode()<CR>
-" function SwitchMouseMode()
-"     if (&mouse == "a")
-"         let &mouse = ""
-"         echo "Mouse is disabled."
-"     else
-"         let &mouse = "a"
-"         echo "Mouse is enabled."
-"     endif
-" endfunction
-" " Toggle text/binary
-" map <C-b> :call SwitchTextBinaryMode()<CR>
-" map! <C-b> <Esc>:call SwitchTextBinaryMode()<CR>
-" function SwitchTextBinaryMode()
-"     if (&binary == 0)
-"         set binary
-"         set noeol
-"         echo "Switch to binary mode."
-"     else
-"         set nobinary
-"         set eol
-"         echo "Switch to text mode."
-"     endif
-" endfunction
-" " To utf-8 file
-" map <C-j> :call ToUTF8()<CR>
-" map! <C-j> <Esc>:call ToUTF8()<CR>
-" function ToUTF8()
-"     if (&fileencoding == "utf-8")
-"         echo "It is already UTF-8."
-"     else
-"         let &fileencoding="utf-8"
-"         echo "Convert to UTF-8."
-"     endif
-"     let &ff="unix"
-" endfunction
-" " Convert tab to spaces
-" map <C-t> :call TabToSpaces()<CR>
-" map! <C-t> <Esc>:call TabToSpaces()<CR>
-" function TabToSpaces()
-"     retab
-"     echo "Convert tab to spaces."
-" endfunction
-" " Toggle line breaking
-" map <C-l> :call SwitchLineBreakingMode()<CR>
-" map! <C-l> <Esc>:call SwitchLineBreakingMode()<CR>
-" function SwitchLineBreakingMode()
-"     if (&wrap == 0)
-"         set wrap
-"         echo "Switch to line breaking mode."
-"     else
-"         set nowrap
-"         echo "Switch to one line mode."
-"     endif
-" endfunction
-" " Switch to full/simple
-" map <C-f> :call SwitchFullSimpleMode()<CR>
-" map! <C-f> <Esc>:call SwitchFullSimpleMode()<CR>
-" function SwitchFullSimpleMode()
-"     if (&mouse == "a")
-"         let &mouse = ""
-"         set nocindent
-"         set nonumber
-"         set wrap
-"         echo "Switch to simple mode.(nomouse, nonumber, nocindent, wrap)"
-"     else
-"         let &mouse = "a"
-"         set cindent
-"         set number
-"         set nowrap
-"         echo "Switch to full mode.(mouse, number, cindent, nowrap)"
-"     endif
-" endfunction
+
+"Remove all trailing whitespace
+nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
