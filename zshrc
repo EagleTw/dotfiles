@@ -1,23 +1,67 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/panyiping/.oh-my-zsh"
 
-# rust cargo
-export PATH="$HOME/.cargo/bin:$PATH"
+##############################################################
+# PATHS
+##############################################################
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/opt/homebrew/bin:$PATH                 # homebrew
+export PATH="$HOME/.cargo/bin:$PATH"                # rust cargo
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
+source ~/.ghcup/env
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"      # llvm
+export PATH="/opt/homebrew/opt/gdb/bin:$PATH"       # gdb
 
+alias em="emacsclient -c $@"
+alias vim="/opt/homebrew/bin/nvim"
+alias c="cd .."
+alias cc="cd ../.."
+alias ccc="cd ../../.."
+
+alias gcc="gcc-12"
+alias gitlog="git log --graph --all --pretty=oneline --abbrev-commit"
+alias qtcreater="/Applications/Qt\ Creator.app/Contents/MacOS/Qt\ Creator"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/riscv32-gnu-toolchain-prebuild/bin:$PATH"   # For risc-v gnu toolchain
+
+# ctags
+ctags=/opt/homebrew/bin/ctags
+
+# For gtest
+export CPLUS_INCLUDE_PATH="/usr/local/include"
+export LIBRARY_PATH="/usr/local/lib"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f "/Users/panyiping/.ghcup/env" ] && source "/Users/panyiping/.ghcup/env" # ghcup-env
+
+ghcup() {
+  OPT=/opt/homebrew/opt/llvm@12/bin/opt \
+    LLC=/opt/homebrew/opt/llvm@12/bin/llc \
+    /Users/panyiping/.ghcup/bin/ghcup $@
+}
+
+
+##############################################################
+# oh my zsh
+##############################################################
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="avit"
+ZSH_THEME="eastwood"
 #ZSH_THEME="miloshadzic"
-ZSH_THEME="cypher"
-# 隱藏用戶名稱(user@hostname)
-DEFAULT_USER=`id -un`
+
 # 含有icon的字型
-POWERLEVEL9K_MODE='nerdfont-complete'
+# POWERLEVEL9K_MODE='nerdfont-complete'
 # command line 左邊想顯示的內容(資料夾路徑、資料夾讀寫狀態、版本控制資訊)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs) # <= left prompt 設了 "dir"
 # command line 右邊想顯示的內容(狀態、時間)
@@ -37,7 +81,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -111,24 +155,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vim="/opt/homebrew/bin/nvim"
-alias c="cd .."
-alias cc="cd ../.."
-alias ccc="cd ../../.."
-
-alias git-log="git log --graph --all --pretty=oneline --abbrev-commit"
-alias qtcreater="/Applications/Qt\ Creator.app/Contents/MacOS/Qt\ Creator"
-
-export PATH="$HOME/.poetry/bin:$PATH"
-#export PATH="$HOME/xpack-riscv-none-elf-gcc-11.3.0-1/bin:$PATH"   # For risc-v gnu toolchain
-
-# ctags
-ctags=/opt/homebrew/bin/ctags
-
-# For gtest
-export CPLUS_INCLUDE_PATH="/usr/local/include"
-export LIBRARY_PATH="/usr/local/lib"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
