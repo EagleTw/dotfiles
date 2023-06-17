@@ -69,6 +69,7 @@ call plug#begin()
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
+  Plug 'editorconfig/editorconfig-vim'
 
   """ Functionalities
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
