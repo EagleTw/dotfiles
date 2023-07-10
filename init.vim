@@ -50,7 +50,7 @@ set hlsearch
 
 """ Trailing space
 set list
-set listchars=trail:▣,tab:>-,eol:$
+set listchars=trail:▣,tab:>-
 
 "#######################################################
 " Plugin Settings
