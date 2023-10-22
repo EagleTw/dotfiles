@@ -77,13 +77,14 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'         " git support
   Plug 'psliwka/vim-smoothie'       " some very smooth ass scrolling
   Plug 'scrooloose/nerdtree'
-  Plug 'preservim/nerdcommenter'
+  Plug 'tpope/vim-commentary'       " commenter, type `gcc` to comment
   Plug 'mhinz/vim-startify'
   Plug 'preservim/tagbar'
 
   """For language support
   Plug 'cespare/vim-toml'
   Plug 'dense-analysis/ale'
+  Plug 'bfrg/vim-cpp-modern'
 
 call plug#end()
 
