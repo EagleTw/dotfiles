@@ -90,13 +90,13 @@ call plug#end()
 "#######################################################
 " Colorscheme
 "#######################################################
-"colo default
+colo torte
 "colo gruvbox
 "colo iceberg
 "color meh
 "colo candle-grey-transparent
 "colo candle-grey
-colo PaperColor
+"colo PaperColor
 
 "#######################################################
 " NERDTree Settings
@@ -175,3 +175,8 @@ nnoremap <C-l> <C-w>l
 " Raw stirng search :SS <\foo>
 "#######################################################
 command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
+
+if &term =~ "ansi"
+    let &t_ti = "\<Esc>[?47h"
+    let &t_te = "\<Esc>[?47l"
+endif
