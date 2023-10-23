@@ -61,11 +61,8 @@ call plug#begin()
   """ Aesthetics - Colorschemes
   Plug 'dracula/vim'                " Color scheme
   Plug 'morhetz/gruvbox'            " Color scheme
-  Plug 'cocopon/iceberg.vim'
-  Plug 'davidosomething/vim-colors-meh' " Very minimal color
-  Plug 'aditya-azad/candle-grey'    " Minimal grey color
   Plug 'NLKNguyen/papercolor-theme'
-
+  Plug 'projekt0n/github-nvim-theme'
 
   """ Aesthetics - Others
   Plug 'ryanoasis/vim-devicons'
@@ -91,13 +88,10 @@ call plug#end()
 "#######################################################
 " Colorscheme
 "#######################################################
-colo torte
+"colo torte
 "colo gruvbox
-"colo iceberg
-"color meh
-"colo candle-grey-transparent
-"colo candle-grey
 "colo PaperColor
+colo github_dark_high_contrast 
 
 "#######################################################
 " NERDTree Settings
@@ -126,37 +120,36 @@ let g:ale_sign_warning = '!'
 "#######################################################
 " Navigate snippet placeholders using tab
 "#######################################################
+set signcolumn=yes
+set updatetime=300
+
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
-"let g:coc_disable_startup_warning = 1    " diable warning
+"let g:coc_disable_startup_warning = 1  " diable warning
 
 " list of the extensions to make sure are always installed
 let g:coc_global_extensions = [
+            \'coc-clangd',
             \'coc-yank',
             \'coc-pairs',
             \'coc-json',
-            \'coc-css',
-            \'coc-html',
-            \'coc-tsserver',
-            \'coc-yaml',
             \'coc-lists',
             \'coc-snippets',
             \'coc-pyright',
             \'coc-clangd',
             \'coc-prettier',
-            \'coc-xml',
             \'coc-syntax',
             \'coc-git',
             \'coc-marketplace',
             \'coc-highlight',
             \'coc-sh',
+            \'coc-markdownlint',
             \]
-"#######################################################
-" F1-F12_HOTKEY_SETTINGS:
+
+"####################################################### F1-F12_HOTKEY_SETTINGS:
 "#######################################################
 nmap <F2> :exec 'NERDTreeToggle' <CR>
 nmap <F3> :TagbarToggle <CR>
-
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
