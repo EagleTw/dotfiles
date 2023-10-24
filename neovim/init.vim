@@ -52,6 +52,8 @@ set hlsearch
 set list
 set listchars=trail:▣,tab:>-
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+/
 "#######################################################
 " Plugin Settings
 "#######################################################
@@ -91,7 +93,7 @@ call plug#end()
 "colo torte
 "colo gruvbox
 "colo PaperColor
-colo github_dark_high_contrast 
+colo github_dark_high_contrast
 
 "#######################################################
 " NERDTree Settings
@@ -145,13 +147,14 @@ let g:coc_global_extensions = [
             \'coc-sh',
             \'coc-markdownlint',
             \]
-
-"####################################################### F1-F12_HOTKEY_SETTINGS:
+nmap <F12> :call CocAction('jumpDefinition', 'tabe')<CR>
+"#######################################################
+"F1-F12_HOTKEY_SETTINGS:
 "#######################################################
 nmap <F2> :exec 'NERDTreeToggle' <CR>
 nmap <F3> :TagbarToggle <CR>
 "Remove all trailing whitespace
-nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+nmap <F11> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 "#######################################################
 " switch between splits using ctrl + {h,j,k,l}
