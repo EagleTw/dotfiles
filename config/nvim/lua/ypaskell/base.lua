@@ -28,7 +28,7 @@ o.scrolloff = 8
 -- Better editor UI
 o.number = true
 o.numberwidth = 2
-o.relativenumber = true
+o.relativenumber = false
 o.signcolumn = "yes"
 o.cursorline = true
 
@@ -92,6 +92,7 @@ o.splitbelow = true
 opt.mouse = "a"
 
 -- Map <leader> to space
+--vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = true })
 --g.mapleader = " "
 --g.maplocalleader = " "
 

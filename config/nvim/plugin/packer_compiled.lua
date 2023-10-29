@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["fish.vim"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/fish.vim",
-    url = "https://github.com/nickeb96/fish.vim"
-  },
   ["github-nvim-theme"] = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
@@ -98,11 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
-  },
-  ["i3-vim-syntax"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/i3-vim-syntax",
-    url = "https://github.com/PotatoesMaster/i3-vim-syntax"
   },
   ["limelight.vim"] = {
     loaded = true,
@@ -124,6 +114,12 @@ _G.packer_plugins = {
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -139,16 +135,6 @@ _G.packer_plugins = {
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["python-syntax"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/python-syntax",
-    url = "https://github.com/vim-python/python-syntax"
-  },
-  ["sxhkd-vim"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/sxhkd-vim",
-    url = "https://github.com/kovetskiy/sxhkd-vim"
-  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -163,16 +149,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/vifm.vim",
     url = "https://github.com/vifm/vifm.vim"
-  },
-  vim = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
-  },
-  ["vim-css-color"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/vim-css-color",
-    url = "https://github.com/ap/vim-css-color"
   },
   ["vim-devicons"] = {
     loaded = true,
