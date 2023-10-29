@@ -10,3 +10,7 @@ end
 map("i", "<C-E>", "<ESC>A")
 map("i", "<C-A>", "<ESC>I")
 
+-- Remove trailing whitespace
+map("n", "<F12>", [[:%s/\s\+$//e<cr>]])
+
+
