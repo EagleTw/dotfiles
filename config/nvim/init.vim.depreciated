@@ -77,26 +77,27 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'         " git support
   Plug 'psliwka/vim-smoothie'       " some very smooth ass scrolling
   Plug 'scrooloose/nerdtree'
-  Plug 'preservim/nerdcommenter'
+  Plug 'tpope/vim-commentary'       " commenter, type `gcc` to comment
   Plug 'mhinz/vim-startify'
   Plug 'preservim/tagbar'
 
   """For language support
   Plug 'cespare/vim-toml'
   Plug 'dense-analysis/ale'
+  Plug 'bfrg/vim-cpp-modern'
 
 call plug#end()
 
 "#######################################################
 " Colorscheme
 "#######################################################
-"colo default
+colo torte
 "colo gruvbox
 "colo iceberg
 "color meh
 "colo candle-grey-transparent
 "colo candle-grey
-colo PaperColor
+"colo PaperColor
 
 "#######################################################
 " NERDTree Settings
@@ -125,42 +126,36 @@ let g:ale_sign_warning = '!'
 "#######################################################
 " Navigate snippet placeholders using tab
 "#######################################################
-let g:tagbar_ctags_bin = '/depot/ctags-5.8/bin//ctags'
+set signcolumn=yes
+set updatetime=300
 
-"#######################################################
-" Navigate snippet placeholders using tab
-"#######################################################
 let g:coc_snippet_next = '<Tab>'
 let g:coc_snippet_prev = '<S-Tab>'
-"let g:coc_disable_startup_warning = 1    " diable warning
+"let g:coc_disable_startup_warning = 1  " diable warning
 
 " list of the extensions to make sure are always installed
 let g:coc_global_extensions = [
+            \'coc-clangd',
             \'coc-yank',
             \'coc-pairs',
             \'coc-json',
-            \'coc-css',
-            \'coc-html',
-            \'coc-tsserver',
-            \'coc-yaml',
             \'coc-lists',
             \'coc-snippets',
             \'coc-pyright',
             \'coc-clangd',
             \'coc-prettier',
-            \'coc-xml',
             \'coc-syntax',
             \'coc-git',
             \'coc-marketplace',
             \'coc-highlight',
             \'coc-sh',
+            \'coc-markdownlint',
             \]
-"#######################################################
-" F1-F12_HOTKEY_SETTINGS:
+
+"####################################################### F1-F12_HOTKEY_SETTINGS:
 "#######################################################
 nmap <F2> :exec 'NERDTreeToggle' <CR>
 nmap <F3> :TagbarToggle <CR>
-
 "Remove all trailing whitespace
 nmap <F12> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
@@ -180,3 +175,8 @@ nnoremap <C-l> <C-w>l
 " Raw stirng search :SS <\foo>
 "#######################################################
 command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
+
+if &term =~ "ansi"
+    let &t_ti = "\<Esc>[?47h"
+    let &t_te = "\<Esc>[?47l"
+endif
