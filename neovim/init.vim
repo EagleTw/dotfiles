@@ -19,8 +19,7 @@ set mouse=a
 set hlsearch                " highlight search
 set incsearch               " incremental search
 
-""" setting for C++ google style
-set tabstop=2               " number of columns occupied by a tab
+set tabstop=8               " number of columns occupied by a tab
 set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=2            " width for autoindents
@@ -154,7 +153,7 @@ nmap <F12> :call CocAction('jumpDefinition', 'tabe')<CR>
 nmap <F2> :exec 'NERDTreeToggle' <CR>
 nmap <F3> :TagbarToggle <CR>
 "Remove all trailing whitespace
-nmap <F11> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+nmap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 "#######################################################
 " switch between splits using ctrl + {h,j,k,l}
