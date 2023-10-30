@@ -57,9 +57,8 @@ packer.startup(function(use)
         branch = 'v3.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
-            -- {'williamboman/mason.nvim'},
-            -- {'williamboman/mason-lspconfig.nvim'},
-
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
