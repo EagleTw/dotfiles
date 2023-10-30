@@ -13,4 +13,5 @@ map("i", "<C-A>", "<ESC>I")
 -- Remove trailing whitespace
 map("n", "<F12>", [[:%s/\s\+$//e<cr>]])
 
-
+-- Nerdtree
+map("n", "<F2>", ":NERDTreeToggle<CR>")
