@@ -25,7 +25,6 @@ packer.startup(function(use)
     -- Dashboard is a nice start screen for nvim
     use("glepnir/dashboard-nvim")
 
-
     -- Telescope
     use({
         "nvim-telescope/telescope.nvim",
@@ -53,6 +52,22 @@ packer.startup(function(use)
 
     -- Syntax Highlighting and Colors --
 
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            --- Uncomment these if you want to manage LSP servers from neovim
+            -- {'williamboman/mason.nvim'},
+            -- {'williamboman/mason-lspconfig.nvim'},
+
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+        }
+    }
 
     -- Junegunn Choi Plugins --
     use("junegunn/goyo.vim")
