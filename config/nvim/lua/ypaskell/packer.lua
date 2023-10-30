@@ -22,36 +22,13 @@ packer.startup(function(use)
     -- Packer can manage itself
     use("wbthomason/packer.nvim")
 
-    -- Dashboard is a nice start screen for nvim
-    use("glepnir/dashboard-nvim")
-
-    -- Telescope
-    use({
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.0",
-        requires = { { "nvim-lua/plenary.nvim" } },
-    })
-    use("nvim-telescope/telescope-file-browser.nvim")
-
-    use("nvim-treesitter/nvim-treesitter") -- Treesitter Syntax Highlighting
-
-    -- Productivity
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-
     -- File management --
-    use("vifm/vifm.vim")
     use("scrooloose/nerdtree")
-    use("tiagofumo/vim-nerdtree-syntax-highlight")
-    use("ryanoasis/vim-devicons")
 
     -- Tim Pope Plugins --
     use("tpope/vim-surround")
 
-    -- Syntax Highlighting and Colors --
-
+    -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -67,11 +44,6 @@ packer.startup(function(use)
             {'L3MON4D3/LuaSnip'},
         }
     }
-
-    -- Junegunn Choi Plugins --
-    use("junegunn/goyo.vim")
-    use("junegunn/limelight.vim")
-    use("junegunn/vim-emoji")
 
     -- Colorschemes --
     use("morhetz/gruvbox")
