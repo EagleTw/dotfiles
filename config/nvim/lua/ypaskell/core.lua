@@ -89,7 +89,6 @@ o.splitbelow = true
 -- o.foldlevelstart = 99
 -- o.foldnestmax = 3
 -- o.foldminlines = 1
---
 opt.mouse = "a"
 
 -- Map <leader> to space
@@ -97,7 +96,3 @@ opt.mouse = "a"
 --g.mapleader = " "
 --g.maplocalleader = " "
 
--------------------------------------------------
--- COLORSCHEMES
--------------------------------------------------
-local ok, _ = pcall(vim.cmd, "colorscheme github_dark_high_contrast")

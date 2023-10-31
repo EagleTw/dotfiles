@@ -51,6 +51,7 @@ packer.startup(function(use)
     use("morhetz/gruvbox")
     use("NLKNguyen/papercolor-theme")
     use("projekt0n/github-nvim-theme")
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- Other stuff --
 
