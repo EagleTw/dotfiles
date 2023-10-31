@@ -20,7 +20,7 @@ o.background = 'dark'
 
 -- Decrease update time
 o.timeoutlen = 500
-o.updatetime = 200
+o.updatetime = 100
 
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 8
