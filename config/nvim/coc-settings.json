@@ -1,0 +1,10 @@
+{
+    "languageserver":
+    {
+        "clangd":
+        {
+            "path":"/u/yuecheng/bin/clangd-util-vcs/client/vcsClangd",
+            "filetypes":["c", "cc", "cpp", "c++", "h", "hpp"]
+        }
+    }
+}
