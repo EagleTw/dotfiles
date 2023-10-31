@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/remote/us01home50/yipingp/.local/share/nvim/site/pack/packer/start/papercolor-theme",
     url = "https://github.com/NLKNguyen/papercolor-theme"
   },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "/remote/us01home50/yipingp/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/remote/us01home50/yipingp/.local/share/nvim/site/pack/packer/start/vim-surround",

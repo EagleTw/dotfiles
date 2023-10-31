@@ -56,5 +56,5 @@ require('rose-pine').setup({
 -------------------------------------------------
 -- COLORSCHEMES
 -------------------------------------------------
---vim.cmd('colorscheme rose-pine')
-vim.cmd('colorscheme github_dark_high_contrast')
+vim.cmd('colorscheme rose-pine')
+--vim.cmd('colorscheme github_dark_high_contrast')
