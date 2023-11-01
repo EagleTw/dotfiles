@@ -93,6 +93,6 @@ opt.mouse = "a"
 
 -- Map <leader> to space
 --vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = true })
---g.mapleader = " "
---g.maplocalleader = " "
+g.mapleader = " "
+g.maplocalleader = " "
 
