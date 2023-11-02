@@ -44,6 +44,15 @@ o.tabstop = 8
 o.shiftwidth = 4
 o.softtabstop = -1 -- If negative, shiftwidth value is used
 
+-- auto-reload files when modified externally
+-- https://unix.stackexchange.com/a/383044
+o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
+
+
 -- Highlight stuffs
 o.list = true
 o.listchars = "trail:◇,tab:→·,extends:▸,precedes:◂"
