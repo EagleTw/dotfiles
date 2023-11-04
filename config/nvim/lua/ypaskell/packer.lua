@@ -19,19 +19,23 @@ vim.cmd([[
 
 
 packer.startup(function(use)
-    -- Packer can manage itself
+    -- Packer can manage itself --
     use("wbthomason/packer.nvim")
 
-    -- File management --
-    use("scrooloose/nerdtree")
-
-    -- Git
-    use("lewis6991/gitsigns.nvim")
+    -- Development Experience --
+    use("scrooloose/nerdtree")           -- File management
+    use("lewis6991/gitsigns.nvim")       -- Git
+    use {                                -- Alignmnet
+        'Vonr/align.nvim',
+        branch = "v2",
+    }
+    use("simrat39/symbols-outline.nvim") -- Outline
+    require("symbols-outline").setup()
 
     -- Tim Pope Plugins --
     use("tpope/vim-surround")
 
-    -- LSP
+    -- Language Servers --
     --use {'neoclide/coc.nvim', branch = 'release'}
 
     use {
@@ -57,7 +61,6 @@ packer.startup(function(use)
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- Other stuff --
-
     if packer_bootstrap then
         packer.sync()
     end

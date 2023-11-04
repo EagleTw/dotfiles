@@ -14,11 +14,9 @@ map("i", "<C-A>", "<ESC>I")
 map("n", "<leader>hs", "<C-w>s")
 map("n", "<leader>vs", "<C-w>v")
 
--- Remove trailing whitespace
-map("n", "<F12>", [[:%s/\s\+$//e<cr>]])
-
--- Nerdtree
-map("n", "<F2>", ":NERDTreeToggle<CR>")
+map("n", "<F2>", ":NERDTreeToggle<CR>") -- Nerdtree
+map("n", "<F3>", ":SymbolsOutline<CR>") -- Outline
+map("n", "<F12>", [[:%s/\s\+$//e<cr>]]) -- Remove trailing whitespace
 
 -- Raw stirng search :SS <\foo>
 vim.cmd([[
