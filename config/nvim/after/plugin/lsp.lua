@@ -63,8 +63,8 @@ require('mason-lspconfig').setup({
 -- After setting up mason-lspconfig you may set up servers via lspconfig
 require('lspconfig').clangd.setup({
     cmd = {
-        --"clangd",
-        "/u/yuecheng/bin/clangd-util-vcs/client/vcsClangd",
+        "clangd",
+        --"/u/yuecheng/bin/clangd-util-vcs/client/vcsClangd",
         "--background-index",
     },
     filetypes = {"c", "cpp", "h", "hpp"},

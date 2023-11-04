@@ -25,6 +25,9 @@ packer.startup(function(use)
     -- File management --
     use("scrooloose/nerdtree")
 
+    -- Git
+    use("lewis6991/gitsigns.nvim")
+
     -- Tim Pope Plugins --
     use("tpope/vim-surround")
 
