@@ -10,13 +10,13 @@ end
 map("i", "<C-E>", "<ESC>A")
 map("i", "<C-A>", "<ESC>I")
 
--- Split
-map("n", "<leader>hs", "<C-w>s")
-map("n", "<leader>vs", "<C-w>v")
+map("n", "<leader>hs", "<C-w>s")             -- Horizontal split
+map("n", "<leader>vs", "<C-w>v")             -- Vertical split
+map('n', '<Leader>wt', [[:%s/\s\+$//e<cr>]]) -- Remove trailing whitespace
 
-map("n", "<F2>", ":NERDTreeToggle<CR>") -- Nerdtree
-map("n", "<F3>", ":SymbolsOutline<CR>") -- Outline
-map("n", "<F12>", [[:%s/\s\+$//e<cr>]]) -- Remove trailing whitespace
+map("n", "<F2>", ":NERDTreeToggle<CR>")       -- Nerdtree
+map("n", "<leader>nt", ":NERDTreeToggle<CR>") -- Nerdtree
+map("n", "<F3>", ":SymbolsOutline<CR>")       -- Outline
 
 -- Raw stirng search :SS <\foo>
 vim.cmd([[
