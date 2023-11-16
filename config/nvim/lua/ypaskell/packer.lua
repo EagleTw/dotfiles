@@ -22,22 +22,33 @@ packer.startup(function(use)
     -- Packer can manage itself --
     use("wbthomason/packer.nvim")
 
-    -- Development Experience --
-    use("scrooloose/nerdtree")           -- File management
-    use("lewis6991/gitsigns.nvim")       -- Git
-    use {                                -- Alignmnet
+    -------------- Development Experience --------------
+    -- Telescope
+    use ("nvim-lua/plenary.nvim")
+    use ("nvim-treesitter/nvim-treesitter")
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- Nerdtree
+    use("scrooloose/nerdtree")
+
+    -- Git
+    use("lewis6991/gitsigns.nvim")
+
+    -- Alignment
+    use {
         'Vonr/align.nvim',
         branch = "v2",
     }
-    use("simrat39/symbols-outline.nvim") -- Outline
+
+    -- Outline
+    use("simrat39/symbols-outline.nvim")
     require("symbols-outline").setup()
 
-    -- Tim Pope Plugins --
-    use("tpope/vim-surround")
-
-    -- Language Servers --
+    -------------- Language Servers --------------
     --use {'neoclide/coc.nvim', branch = 'release'}
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -54,14 +65,14 @@ packer.startup(function(use)
         }
     }
 
-    -- Colorschemes --
+    -------------- Colorschemes --------------
     use("morhetz/gruvbox")
     use("NLKNguyen/papercolor-theme")
     use("projekt0n/github-nvim-theme")
     use("blazkowolf/gruber-darker.nvim")
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-    -- Other stuff --
+    -------------- Other stuff --------------
     if packer_bootstrap then
         packer.sync()
     end

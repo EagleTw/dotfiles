@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/livlig/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/livlig/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/livlig/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/livlig/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/livlig/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/panyiping/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/panyiping/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/panyiping/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/panyiping/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/panyiping/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,88 +76,103 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["align.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/align.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/align.nvim",
     url = "https://github.com/Vonr/align.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["github-nvim-theme"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruber-darker.nvim"] = {
+    loaded = true,
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/gruber-darker.nvim",
+    url = "https://github.com/blazkowolf/gruber-darker.nvim"
   },
   gruvbox = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/gruvbox",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   nerdtree = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/nerdtree",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/scrooloose/nerdtree"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["papercolor-theme"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/papercolor-theme",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/papercolor-theme",
     url = "https://github.com/NLKNguyen/papercolor-theme"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/rose-pine",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
     url = "https://github.com/simrat39/symbols-outline.nvim"
   },
-  ["vim-surround"] = {
+  ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/livlig/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
