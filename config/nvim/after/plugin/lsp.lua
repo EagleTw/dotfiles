@@ -33,9 +33,9 @@
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
-    -- see :help lsp-zero-keybindings
-    -- to learn the available actions
+    -- see :help lsp-zero-keybindings to learn the available actions
     lsp_zero.default_keymaps({buffer = bufnr})
+    print('--> Lsp-zero attatched')
 end)
 
 -- don't need to customize the language servers
