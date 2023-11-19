@@ -37,6 +37,9 @@ packer.startup(function(use)
     -- Git
     use("lewis6991/gitsigns.nvim")
 
+    -- Mark
+    use("chentoast/marks.nvim")
+
     -- Alignment
     use {
         'Vonr/align.nvim',
