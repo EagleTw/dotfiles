@@ -56,7 +56,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 -- Highlight stuffs
 o.list = true
 o.listchars = "trail:◇,tab:→·"
--- o.formatoptions = 'qrn1'
+o.formatoptions = 'qrn1'
 
 vim.cmd("highlight ExtraWhitespace ctermbg=red guibg=red")
 vim.cmd("match ExtraWhitespace /\\s\\+$\\| \\+\\ze\\t\\|[^\\t]\\zs\\t\\+/")
