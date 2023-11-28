@@ -55,8 +55,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 
 -- Highlight stuffs
 o.list = true
-o.listchars = "trail:◇,tab:→·,extends:▸,precedes:◂"
--- o.listchars = 'eol:¬,space:◇,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,'
+o.listchars = "trail:◇,tab:→·"
 -- o.formatoptions = 'qrn1'
 
 vim.cmd("highlight ExtraWhitespace ctermbg=red guibg=red")
