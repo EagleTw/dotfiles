@@ -14,6 +14,12 @@ map("n", "<leader>hs", "<C-w>s")             -- Horizontal split
 map("n", "<leader>vs", "<C-w>v")             -- Vertical split
 map('n', '<Leader>wt', [[:%s/\s\+$//e<cr>]]) -- Remove trailing whitespace
 
+-- Split movements
+map("n", "<leader>wh", "<C-w>h")
+map("n", "<leader>wj", "<C-w>j")
+map("n", "<leader>wk", "<C-w>k")
+map("n", "<leader>wl", "<C-w>l")
+
 map("n", "<F2>", ":NERDTreeToggle<CR>")       -- Nerdtree
 map("n", "<leader>nt", ":NERDTreeToggle<CR>") -- Nerdtree
 map("n", "<F3>", ":SymbolsOutline<CR>")       -- Outline
