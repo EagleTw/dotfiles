@@ -20,9 +20,12 @@ map("n", "<leader>wj", "<C-w>j")
 map("n", "<leader>wk", "<C-w>k")
 map("n", "<leader>wl", "<C-w>l")
 
+
 map("n", "<F2>", ":NERDTreeToggle<CR>")       -- Nerdtree
 map("n", "<leader>nt", ":NERDTreeToggle<CR>") -- Nerdtree
 map("n", "<F3>", ":SymbolsOutline<CR>")       -- Outline
+map("n", "<leader>srn", ":set rnu!<CR>")      -- Toogle reletive number
+
 
 -- Raw stirng search :SS <\foo>
 vim.cmd([[
