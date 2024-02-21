@@ -20,7 +20,7 @@ map("n", "<leader>wj", "<C-w>j")
 map("n", "<leader>wk", "<C-w>k")
 map("n", "<leader>wl", "<C-w>l")
 
-
+-- Self
 map("n", "<F2>", ":NERDTreeToggle<CR>")       -- Nerdtree
 map("n", "<leader>nt", ":NERDTreeToggle<CR>") -- Nerdtree
 map("n", "<F3>", ":SymbolsOutline<CR>")       -- Outline
