@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/gruber-darker.nvim",
     url = "https://github.com/blazkowolf/gruber-darker.nvim"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -134,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/scrooloose/nerdtree"
   },
+  nvim = {
+    loaded = true,
+    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -154,25 +154,10 @@ _G.packer_plugins = {
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["papercolor-theme"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/papercolor-theme",
-    url = "https://github.com/NLKNguyen/papercolor-theme"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
-  },
-  ["symbols-outline.nvim"] = {
-    loaded = true,
-    path = "/Users/panyiping/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
-    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
