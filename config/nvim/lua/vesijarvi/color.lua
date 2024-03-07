@@ -61,4 +61,4 @@
 --vim.cmd('colorscheme github_dark_colorblind')
 --vim.cmd.colorscheme("gruber-darker")
 --vim.cmd.colorscheme("torte")
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("catppuccin-mocha")
