@@ -25,6 +25,7 @@ map('n', '<F2>', ':NERDTreeToggle<CR>')       -- Nerdtree
 map('n', '<leader>nt', ':NERDTreeToggle<CR>') -- Nerdtree
 map('n', '<F3>', ':SymbolsOutline<CR>')       -- Outline
 map('n', '<leader>srn', ':set rnu!<CR>')      -- Toogle reletive number
+map('n', '<F4>', ":put = '<' .. strftime('%Y-%m-%d %a') .. '>'<CR>") -- Time stamp
 
 -- Raw stirng search :SS <\foo>
 vim.cmd([[
