@@ -31,11 +31,12 @@ packer.startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use("scrooloose/nerdtree")     -- Nerdtree
-    use("lewis6991/gitsigns.nvim") -- git integration
-    use("chentoast/marks.nvim")    -- Marking
-    use('vimwiki/vimwiki')         -- markdown note taking
-    use {                          -- Alignment
+    use("scrooloose/nerdtree")           -- Nerdtree
+    use("lewis6991/gitsigns.nvim")       -- git integration
+    use("chentoast/marks.nvim")          -- Marking
+    use('vimwiki/vimwiki')               -- markdown note taking
+    use('simrat39/symbols-outline.nvim') -- markdown outline
+    use {                                -- Alignment
         'Vonr/align.nvim',
         branch = "v2",
     }
