@@ -27,6 +27,8 @@ map('n', '<F3>', ':SymbolsOutline<CR>')       -- Outline
 map('n', '<leader>srn', ':set rnu!<CR>')      -- Toogle reletive number
 map('n', '<F4>', ":put = '<' .. strftime('%Y-%m-%d %a') .. '>'<CR>") -- Time stamp
 
+map('n', '<leader>toc', ':VimwikiTOC<CR>')
+
 -- Raw stirng search :SS <\foo>
 vim.cmd([[
     command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
