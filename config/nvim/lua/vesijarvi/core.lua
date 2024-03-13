@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd("FileType", {
             vim.opt.shiftwidth = 2
             vim.opt.tabstop = 2
             vim.opt.softtabstop = 2
-            vim.cmd.colorscheme("catppuccin-mocha")
+            vim.cmd.colorscheme("torte")
     end,
 })
 

@@ -34,8 +34,12 @@ packer.startup(function(use)
     use("scrooloose/nerdtree")           -- Nerdtree
     use("lewis6991/gitsigns.nvim")       -- git integration
     use("chentoast/marks.nvim")          -- Marking
-    use('vimwiki/vimwiki')               -- markdown note taking
-    use('simrat39/symbols-outline.nvim') -- markdown outline
+    use('vimwiki/vimwiki')
+
+    use {
+        'simrat39/symbols-outline.nvim', -- markdown outline
+        require("symbols-outline").setup()
+    }
     use {                                -- Alignment
         'Vonr/align.nvim',
         branch = "v2",
