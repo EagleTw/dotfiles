@@ -7,6 +7,7 @@ vim.g.vimwiki_list = {{
 }}
 
 vim.api.nvim_set_var('vimwiki_listsyms', ' .oOx')
+vim.api.nvim_set_var('vimwiki_markdown_link_ext', 1)
 
 local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = false })
