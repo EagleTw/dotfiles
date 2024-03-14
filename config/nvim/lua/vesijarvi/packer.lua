@@ -67,9 +67,9 @@ packer.startup(function(use)
     -------------- Colorschemes --------------
     --use("morhetz/gruvbox")
     --use("NLKNguyen/papercolor-theme")
+    use("catppuccin/nvim")
     use("projekt0n/github-nvim-theme")
     use("blazkowolf/gruber-darker.nvim")
-    use("catppuccin/nvim")
     --use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -------------- Other stuff --------------
