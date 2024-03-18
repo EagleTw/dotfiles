@@ -55,9 +55,9 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
         callback = function()
-            vim.opt.shiftwidth = 4
-            vim.opt.tabstop = 4
-            vim.opt.softtabstop = 4
+            vim.opt.shiftwidth = 2
+            vim.opt.tabstop = 2
+            vim.opt.softtabstop = 2
             vim.expandtab = false
             vim.cmd.colorscheme("catppuccin-mocha")
     end,
