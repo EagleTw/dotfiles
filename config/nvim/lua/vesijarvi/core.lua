@@ -69,8 +69,8 @@ o.list = true
 o.listchars = "eol:$,trail:★,tab:» "
 o.formatoptions = 'qrn1'
 
-vim.cmd("highlight ExtraWhitespace ctermbg=red guibg=red")
-vim.cmd("match ExtraWhitespace /\\s\\+$\\| \\+\\ze\\t\\|[^\\t]\\zs\\t\\+/")
+vim.cmd("highlight EoLSpace ctermbg=DarkBlue guibg=DarkBlue")
+vim.cmd("match EoLSpace /\\s\\+$/")
 
 -- Makes neovim and host OS clipboard play nicely with each other
 o.clipboard = "unnamedplus"
