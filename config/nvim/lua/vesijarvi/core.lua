@@ -59,14 +59,14 @@ vim.api.nvim_create_autocmd("FileType", {
             vim.opt.tabstop = 2
             vim.opt.softtabstop = 2
             vim.expandtab = false
-            vim.cmd.colorscheme("catppuccin-mocha")
+            vim.cmd.colorscheme("github_dark_tritanopia")
     end,
 })
 
 
 -- Highlight stuffs
 o.list = true
-o.listchars = "trail:◇,tab:→·"
+o.listchars = "eol:$,trail:★,tab:» "
 o.formatoptions = 'qrn1'
 
 vim.cmd("highlight ExtraWhitespace ctermbg=red guibg=red")
