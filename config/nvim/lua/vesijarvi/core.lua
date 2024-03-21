@@ -44,6 +44,11 @@ vim.opt.list = true
 vim.opt.listchars = "eol:$,trail:★,tab:» "
 vim.opt.formatoptions = 'qrn1'
 
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.undofile = true
+vim.o.swapfile = false
+
 vim.cmd("highlight EoLSpace ctermbg=DarkBlue guibg=DarkBlue")
 vim.cmd("match EoLSpace /\\s\\+$/")
 
