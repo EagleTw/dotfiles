@@ -21,13 +21,12 @@ map('n', '<leader>wk', '<C-w>k')
 map('n', '<leader>wl', '<C-w>l')
 
 -- Self
-map('n', '<F2>', ':NERDTreeToggle<CR>')       -- Nerdtree
-map('n', '<leader>nt', ':NERDTreeToggle<CR>') -- Nerdtree
-map('n', '<F3>', ':SymbolsOutline<CR>')       -- Outline
-map('n', '<leader>srn', ':set rnu!<CR>')      -- Toogle reletive number
-map('n', '<F4>', ":put = '<' .. strftime('%Y-%m-%d %a') .. '>'<CR>") -- Time stamp
-
-map('n', '<leader>toc', ':VimwikiTOC<CR>')
+map('n', '<F2>', ':NERDTreeToggle<CR>')           -- Nerdtree
+map('n', '<leader>nt', ':NERDTreeToggle<CR>')     -- Nerdtree
+map('n', '<F3>', ':SymbolsOutline<CR>')           -- Outline
+map('n', '<leader>srn', ':set rnu!<CR>')          -- Toogle reletive number
+map('n', '<F4>', ':lua PutTimeInTimeZone()<CR>')  -- Time stamp
+map('i', '<F4>', ':lua PutTimeInTimeZone()<CR>')  -- Time stamp
 
 -- Raw stirng search :SS <\foo>
 vim.cmd([[
@@ -39,3 +38,14 @@ vim.cmd([[
     endif
     ]]
 )
+
+function PutTimeInTimeZone()
+    -- Set the desired timezone
+    vim.fn.setenv("TZ", "Asia/Taipei")
+    -- Print the timestamp in the specified timezone with the desired format
+    local timestamp = vim.fn.strftime("%Y-%m-%d %H:%M", vim.fn.localtime())
+    timestamp = ' @done ' .. timestamp
+    vim.api.nvim_put({timestamp}, '', true, true)
+end
+
+
