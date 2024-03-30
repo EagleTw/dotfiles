@@ -42,6 +42,7 @@ vim.opt.softtabstop = -1 -- If negative, shiftwidth value is used
 
 vim.opt.list = true
 vim.opt.listchars = "eol:$,trail:★,tab:» "
+--vim.opt.listchars = "trail:★,tab:» "
 vim.opt.formatoptions = 'qrn1'
 
 vim.o.backup = false
@@ -56,10 +57,10 @@ vim.cmd("match EoLSpace /\\s\\+$/")
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
         callback = function()
-            vim.opt.shiftwidth = 2
-            vim.opt.tabstop = 2
-            vim.opt.softtabstop = 2
-            vim.g.expandtab = false
+            vim.opt.shiftwidth = 4
+            vim.opt.tabstop = 4
+            vim.opt.softtabstop = 4
+            vim.g.expandtab = true
             --vim.cmd.colorscheme("github_dark_tritanopia")
     end,
 })
