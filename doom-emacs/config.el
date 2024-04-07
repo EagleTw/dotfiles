@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Yi-Ping Pan"
-      user-mail-address "yipingp@synopsys.com")
+      user-mail-address "yipingp@outlook.com")
 
 ;; Auto maximized when open
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
