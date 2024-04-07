@@ -24,7 +24,7 @@ vim.opt.relativenumber = false
 vim.opt.numberwidth = 2
 vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,100"
 
 -- Better editing experience
 vim.opt.ignorecase = true
