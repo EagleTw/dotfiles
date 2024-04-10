@@ -67,7 +67,7 @@
         `(("DONE"     . "#00A36C")
           ("NOTE"     . "#D8BFD8")
           ("REMINDER" . "#CCCCFF")
-          ("ONGOING"  . "#FFE4E1")
+          ("ONGOING"  . "#A569BD")
           ("TODO"       warning bold)
           ("FIXME"      error bold)
           ("HACK"       font-lock-constant-face bold)
