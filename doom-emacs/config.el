@@ -64,12 +64,13 @@
   :config
   (setq hl-todo-highlight-punctuation ":"
         hl-todo-keyword-faces
-        `(("TODO"       warning bold)
+        `(("DONE"     . "#00A36C")
+          ("NOTE"     . "#0047AB")
+          ("REMINDER" . "#CCCCFF")
+          ("TODO"       warning bold)
           ("FIXME"      error bold)
           ("HACK"       font-lock-constant-face bold)
           ("REVIEW"     font-lock-keyword-face bold)
-          ("DONE"       success bold)
-          ("NOTE"       success bold)
           ("DEPRECATED" font-lock-doc-face bold))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
