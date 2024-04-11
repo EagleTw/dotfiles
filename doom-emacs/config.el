@@ -78,7 +78,9 @@
 ;; Org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq org-directory (getenv "NOTES_HOME"))
+(defvar notes-home (getenv "NOTES_HOME"))
+
+(setq org-directory notes-home)
 
 (setq org-todo-keywords
   '((sequence "TODO" "DOING" "WAITING" "DONE")))
@@ -89,6 +91,9 @@
   (setq org-log-done t)
   (setq org-log-into-drawer t))
 
+(setq org-agenda-files
+      (list (concat notes-home "/ielts_study/01_planner.org")
+            (concat notes-home "/snps/snps_task.org")))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
