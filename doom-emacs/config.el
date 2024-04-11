@@ -67,7 +67,7 @@
         `(("DONE"     . "#00A36C")
           ("NOTE"     . "#D8BFD8")
           ("REMINDER" . "#CCCCFF")
-          ("ONGOING"  . "#A569BD")
+          ("DOING"    . "#A569BD")
           ("TODO"       warning bold)
           ("FIXME"      error bold)
           ("HACK"       font-lock-constant-face bold)
@@ -81,7 +81,7 @@
 (setq org-directory (getenv "NOTES_HOME"))
 
 (setq org-todo-keywords
-  '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+  '((sequence "TODO" "DOING" "WAITING" "DONE")))
 
 ;; Enable logging of done tasks, and log stuff into the LOGBOOK drawer by
 ;; default
