@@ -90,9 +90,8 @@
         (sequence "|" "CANCELED(c)")))
 
 ;; Enable logging of done tasks, and log stuff into the LOGBOOK drawer by
-;; default
 (after! org
-  (setq org-log-done t)
+  (setq org-log-done 'time) ; timestamp added when marked done
   (setq org-log-into-drawer t))
 
 (setq org-agenda-files
