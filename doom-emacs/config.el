@@ -95,7 +95,8 @@
   (setq org-log-into-drawer t))
 
 (setq org-agenda-files
-      (list (concat notes-home "/ielts_study/01_planner.org")
+      (list (concat notes-home "/README.org")
+            (concat notes-home "/ielts_study/01_planner.org")
             (concat notes-home "/snps/snps_task.org")))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
