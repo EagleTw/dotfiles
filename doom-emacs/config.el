@@ -80,6 +80,10 @@
 
 (defvar notes-home (getenv "NOTES_HOME"))
 
+;; Handle error if NOTES_HOME is not set
+(unless notes-home
+  (error "NOTES_HOME environment variable is not set"))
+
 (setq org-directory notes-home)
 
 ;; C-c C-t followed by the selection key, the entry is switched to this state
