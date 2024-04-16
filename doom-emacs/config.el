@@ -103,6 +103,18 @@
             (concat notes-home "/ielts_study/01_planner.org")
             (concat notes-home "/snps/snps_task.org")))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LSP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defvar clangd-binary (getenv "MY_CLANGD"))
+
+(if clangd-binary
+    (progn
+      (setq lsp-clients-clangd-executable clangd-binary)
+      (message "Custom Clangd path is set to %s" clangd-binary))
+  (message "Default Clangd path is set"))
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
