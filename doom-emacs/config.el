@@ -46,6 +46,9 @@
 ;; Column 80
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
+;; kill-buffer with :q
+(global-set-key [remap evil-quit] 'kill-buffer-and-window)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Appearence
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
