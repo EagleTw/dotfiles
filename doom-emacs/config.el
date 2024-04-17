@@ -51,7 +51,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq doom-font (font-spec :family "IntelOne Mono" :"size 15"))
-(setq doom-theme 'doom-oceanic-next)
+;(setq doom-theme 'doom-oceanic-next)
+(setq doom-theme 'wombat)
+;(setq doom-theme 'catppuccin)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -117,7 +119,7 @@
 
 ;; Lsp performance tune
 ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
-(setq read-process-output-max (* 1024 1024)) ;; 1mb
+(setq read-process-output-max (* 4 1024 1024)) ;; 4mb
 (setq lsp-idle-delay 0.500)
 (setq lsp-log-io nil) ; if set to true can cause a performance hit
 
