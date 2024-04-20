@@ -74,9 +74,8 @@
 ;; C-c C-t followed by the selection key, the entry is switched to this state
 ;; S-<left> S-<right> to change state
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "DOING(s)" "WAIT(w)" "|" "DONE(d)")
-        (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-        (sequence "|" "CANCELED(c)")))
+      '((sequence "TODO(t)" "DOING(s)" "WAIT(w)" "|" "DONE(d!)" "CANCELED(c!)")
+        (sequence "REPORT(r)" "BUG(b)" "ANALYZED(a)" "|" "FIXED(f)")))
 
 ;; Enable logging of done tasks, and log stuff into the LOGBOOK drawer by
 (after! org
