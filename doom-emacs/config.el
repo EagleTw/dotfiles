@@ -84,13 +84,11 @@
 ;; Enable logging of done tasks, and log stuff into the LOGBOOK drawer by
 (after! org
   (setq org-log-done 'time) ; timestamp added when marked done
-  (setq org-log-into-drawer t))
-
-(setq org-agenda-files
+  (setq org-log-into-drawer t)
+  (setq org-agenda-files
       (list (concat notes-home "/README.org")
             (concat notes-home "/ielts_study/01_planner.org")
-            (concat notes-home "/snps/snps_task.org")))
-
+            (concat notes-home "/snps/snps_task.org"))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; LSP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
