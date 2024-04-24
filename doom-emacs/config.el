@@ -88,9 +88,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; LSP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;; clangd path for snps development
+;; setenv MY_CLANGD ...
 (defvar clangd-binary (getenv "MY_CLANGD"))
-
 (if clangd-binary
     (progn
       (setq lsp-clients-clangd-executable clangd-binary)
