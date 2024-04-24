@@ -35,8 +35,8 @@
 
 (setq doom-font (font-spec :family "IntelOne Mono" :"size 15"))
 ;(setq doom-theme 'doom-oceanic-next)
-(setq doom-theme 'wombat)
-;(setq doom-theme 'catppuccin)
+;(setq doom-theme 'wombat)
+(setq doom-theme 'catppuccin)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
