@@ -1,13 +1,10 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
-
-
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Yi-Ping Pan"
       user-mail-address "yipingp@outlook.com")
+
+;; Gargadge collection threshold (default 8kb)
+(setq gc-cons-threshold 100000000) ;100mb
 
 ;; Auto maximized when open
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -24,7 +21,7 @@
 (setq-default show-trailing-whitespace t)
 
 ;; Column 80
-(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(setq-default fill-column 80)
 
 ;; kill-buffer with :q
 ;;(global-set-key [remap evil-quit] 'kill-buffer-and-window)
@@ -73,10 +70,10 @@
 
 ;; C-c C-t followed by the selection key, the entry is switched to this state
 ;; S-<left> S-<right> to change state
-;; There is a bug, you need to org-mode-restart
-;;(setq org-todo-keywords
-;;      '((sequence "TODO(t)" "DOING(s)" "WAIT(w)" "|" "DONE(d!)" "CANCELED(c!)")
-;;        (sequence "REPORT(r)" "BUG(b)" "ANALYZED(a)" "|" "FIXED(f)")))
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "DOING(s)" "WAIT(w)" "|" "DONE(d)")
+        (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
+        (sequence "|" "CANCELED(c)")))
 
 ;; Enable logging of done tasks, and log stuff into the LOGBOOK drawer by
 (after! org
