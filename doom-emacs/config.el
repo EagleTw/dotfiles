@@ -6,10 +6,12 @@
 ;; Gargadge collection threshold (default 8kb)
 (setq gc-cons-threshold 100000000) ;100mb
 
-;; Auto maximized when open
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-(setq default-frame-alist '((width . 90) (height . 40)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Text
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; font setting
+(setq doom-font (font-spec :family "IntelOne Mono" :"size 15"))
 
 ;; line number
 (global-display-line-numbers-mode)
@@ -23,21 +25,25 @@
 ;; Column 80
 (setq-default fill-column 80)
 
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+
 ;; kill-buffer with :q
 ;;(global-set-key [remap evil-quit] 'kill-buffer-and-window)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Appearence
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Auto maximized when open
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(setq default-frame-alist '((width . 90) (height . 40)))
 
-(setq doom-font (font-spec :family "IntelOne Mono" :"size 15"))
+;; Fonts and themes
+(setq doom-theme 'catppuccin)
 ;(setq doom-theme 'doom-oceanic-next)
 ;(setq doom-theme 'wombat)
-(setq doom-theme 'catppuccin)
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
 
 (use-package hl-todo
   :hook ((prog-mode . hl-todo-mode)
