@@ -87,8 +87,10 @@
   (setq org-log-into-drawer t)
   (setq org-agenda-files
       (list (concat notes-home "/README.org")
-            (concat notes-home "/ielts_study/01_planner.org")
+            (concat notes-home "/5am_club/index.org")
+            (concat notes-home "/5am_club/01_start.org")
             (concat notes-home "/snps/snps_task.org"))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; LSP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
