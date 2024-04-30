@@ -24,6 +24,7 @@
 
 ;; Column 80
 (setq-default fill-column 80)
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
