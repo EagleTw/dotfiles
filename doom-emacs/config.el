@@ -42,7 +42,8 @@
 (setq default-frame-alist '((width . 90) (height . 40)))
 
 ;; Fonts and themes
-(setq doom-theme 'catppuccin)
+;(setq doom-theme 'catppuccin)
+(setq doom-theme 'deeper-blue)
 ;(setq doom-theme 'doom-oceanic-next)
 ;(setq doom-theme 'wombat)
 
