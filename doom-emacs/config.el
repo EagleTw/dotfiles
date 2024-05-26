@@ -91,6 +91,7 @@
       (list (concat notes-home "/README.org")
             (concat notes-home "/5am_club/index.org")
             (concat notes-home "/5am_club/01_start.org")
+            (concat notes-home "/project_up/01_planner.org")
             (concat notes-home "/snps/snps_task.org"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
