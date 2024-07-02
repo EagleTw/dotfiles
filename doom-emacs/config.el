@@ -112,6 +112,8 @@
 (setq lsp-idle-delay 0.500)
 (setq lsp-log-io nil) ; if set to true can cause a performance hit
 
+;; tab
+(setq-default tab-width 8)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
