@@ -8,6 +8,9 @@
 [core]
 	editor = vim
 [alias]
-	lg = log --oneline --graph --decorate
+	lg = log --oneline --graph --decorate --all
+	d = difftool
 [diff]
 	tool = vimdiff
+[difftool]
+	prompt = false
