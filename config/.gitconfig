@@ -1,0 +1,13 @@
+[user]
+	name = yipingp.us01
+	email = pan.yiping.fi@gmail.com
+[init]
+	defaultBranch = main
+[push]
+	default = simple
+[core]
+	editor = vim
+[alias]
+	lg = log --oneline --graph --decorate
+[diff]
+	tool = vimdiff
