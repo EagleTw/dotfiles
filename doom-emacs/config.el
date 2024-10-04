@@ -4,17 +4,19 @@
       user-mail-address "yipingp@outlook.com")
 
 ;; Gargadge collection threshold (default 8kb)
-(setq gc-cons-threshold 100000000) ;100mb
+(setq gc-cons-threshold 200 * 1024 * 1024       ;200mb
+      gc-cons-percentage 0.6)
 
-
+;; For performance on SNPS machine
+(setq flycheck-check-syntax-automatically '(save))
+(evil-escape-mode -1)
+(remove-hook 'pre-command-hook #'evil-escape-pre-command-hook)
+(remove-hook 'post-command-hook #'evil-escape-post-command-hook)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Text
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font setting
 (setq doom-font (font-spec :family "IntelOne Mono" :"size 15"))
-
-;; line number
-(global-display-line-numbers-mode)
 
 ;; Changeline if too long
 (global-visual-line-mode)
@@ -25,6 +27,9 @@
 ;; Column 80
 (setq-default fill-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+
+;; line number
+(global-display-line-numbers-mode)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -43,26 +48,26 @@
 
 ;; Fonts and themes
 ;(setq doom-theme 'catppuccin)
-(setq doom-theme 'deeper-blue)
-;(setq doom-theme 'doom-oceanic-next)
+;(setq doom-theme 'deeper-blue)
+(setq doom-theme 'doom-oceanic-next)
 ;(setq doom-theme 'wombat)
 
-(use-package hl-todo
-  :hook ((prog-mode . hl-todo-mode)
-         (markdown-mode . hl-todo-mode)
-         (org-mode . hl-todo-mode))
-  :config
-  (setq hl-todo-highlight-punctuation ":"
-        hl-todo-keyword-faces
-        `(("DONE"     . "#00A36C")
-          ("NOTE"     . "#D8BFD8")
-          ("REMINDER" . "#CCCCFF")
-          ("DOING"    . "#A569BD")
-          ("TODO"       warning bold)
-          ("WAIT"       font-lock-keyword-face bold)
-          ("FIXME"      error bold)
-          ("HACK"       font-lock-constant-face bold)
-          ("DEPRECATED" font-lock-doc-face bold))))
+;(use-package hl-todo
+;  :hook ((prog-mode . hl-todo-mode)
+;         (markdown-mode . hl-todo-mode)
+;         (org-mode . hl-todo-mode))
+;  :config
+;  (setq hl-todo-highlight-punctuation ":"
+;        hl-todo-keyword-faces
+;        `(("DONE"     . "#00A36C")
+;          ("NOTE"     . "#D8BFD8")
+;          ("REMINDER" . "#CCCCFF")
+;          ("DOING"    . "#A569BD")
+;          ("TODO"       warning bold)
+;          ("WAIT"       font-lock-keyword-face bold)
+;          ("FIXME"      error bold)
+;          ("HACK"       font-lock-constant-face bold)
+;          ("DEPRECATED" font-lock-doc-face bold))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org-mode
@@ -109,7 +114,7 @@
 ;; Lsp performance tune
 ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
 (setq read-process-output-max (* 4 1024 1024)) ;; 4mb
-(setq lsp-idle-delay 0.500)
+;;(setq lsp-idle-delay 0.500)
 (setq lsp-log-io nil) ; if set to true can cause a performance hit
 
 ;; tab
