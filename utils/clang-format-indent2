@@ -1,4 +1,4 @@
-BasedOnStyle: Chromium
+BasedOnStyle: llvm
 Language: Cpp
 MaxEmptyLinesToKeep: 3
 IndentCaseLabels: false
