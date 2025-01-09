@@ -6,7 +6,7 @@ AllowShortIfStatementsOnASingleLine: false
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
 DerivePointerAlignment: false
-PointerAlignment: Left
+PointerAlignment: Right
 SpaceAfterCStyleCast: true
 TabWidth: 4
 UseTab: Never
