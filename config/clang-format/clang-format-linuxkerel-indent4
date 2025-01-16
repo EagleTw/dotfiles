@@ -58,7 +58,7 @@ CompactNamespaces: false
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ConstructorInitializerIndentWidth: 8 #mod
 ContinuationIndentWidth: 4 #mod
-Cpp11BracedListStyle: false
+Cpp11BracedListStyle: true #mod
 DerivePointerAlignment: false
 DisableFormat: false
 ExperimentalAutoDetectBinPacking: false
@@ -112,6 +112,6 @@ SpacesInContainerLiterals: false
 SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
-Standard: Cpp03
+Standard: c++17 #mod
 TabWidth: 4 #mod
 UseTab: Never #mod
