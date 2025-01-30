@@ -1,0 +1,13 @@
+#+title: Readme
+
+This is a personal dotfile config directory.
+
+The setup contains the following items:
+
+- Cgdb
+- Clang-format
+- [[https://github.com/hlissner/doom-emacs][Doom Emacs]] setup
+- Git
+- Neovim
+- Shell configurations (e.g., Zsh, Bash, Csh)
+- Tmux
