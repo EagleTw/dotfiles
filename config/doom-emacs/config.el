@@ -9,32 +9,22 @@
 
 ;; For performance on SNPS machine
 (setq flycheck-check-syntax-automatically '(save))
-(evil-escape-mode -1)
-(remove-hook 'pre-command-hook #'evil-escape-pre-command-hook)
-(remove-hook 'post-command-hook #'evil-escape-post-command-hook)
+;(evil-escape-mode -1)
+;(remove-hook 'pre-command-hook #'evil-escape-pre-command-hook)
+;(remove-hook 'post-command-hook #'evil-escape-post-command-hook)
+;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Text
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font setting
-(setq doom-font (font-spec :family "IntelOne Mono" :"size 15"))
+(setq doom-font (font-spec :family "IntelOne Mono" :size 18))
 
-;; Changeline if too long
-(global-visual-line-mode)
-
-;; Trailing whitespace
-(setq-default show-trailing-whitespace t)
+(global-visual-line-mode t)  ;; Changeline if too long
+(setq display-line-numbers t)
 
 ;; Column 80
-(setq-default fill-column 80)
+(setq-default display-fill-column-indicator-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
-
-;; line number
-(global-display-line-numbers-mode)
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
-
 
 ;; kill-buffer with :q
 ;;(global-set-key [remap evil-quit] 'kill-buffer-and-window)
@@ -44,30 +34,28 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Auto maximized when open
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq default-frame-alist '((width . 90) (height . 40)))
+(setq default-frame-alist '((width . 100) (height . 40)))
 
 ;; Fonts and themes
 ;(setq doom-theme 'catppuccin)
 ;(setq doom-theme 'deeper-blue)
-(setq doom-theme 'doom-oceanic-next)
-;(setq doom-theme 'wombat)
+;(setq doom-theme 'doom-oceanic-next)
+(setq doom-theme 'modus-vivendi)
+;(setq doom-theme 'doom-homage-black)
+;(setq doom-theme 'doom-ir-black)
+;(setq doom-theme 'tango-dark)
 
-;(use-package hl-todo
-;  :hook ((prog-mode . hl-todo-mode)
-;         (markdown-mode . hl-todo-mode)
-;         (org-mode . hl-todo-mode))
-;  :config
-;  (setq hl-todo-highlight-punctuation ":"
-;        hl-todo-keyword-faces
-;        `(("DONE"     . "#00A36C")
-;          ("NOTE"     . "#D8BFD8")
-;          ("REMINDER" . "#CCCCFF")
-;          ("DOING"    . "#A569BD")
-;          ("TODO"       warning bold)
-;          ("WAIT"       font-lock-keyword-face bold)
-;          ("FIXME"      error bold)
-;          ("HACK"       font-lock-constant-face bold)
-;          ("DEPRECATED" font-lock-doc-face bold))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Copilot
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package! copilot
+  ;;hook (prog-mode . copilot-mode)
+  :commands copilot-mode
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org-mode
@@ -81,23 +69,12 @@
 
 (setq org-directory notes-home)
 
-;; C-c C-t followed by the selection key, the entry is switched to this state
-;; S-<left> S-<right> to change state
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "DOING(s)" "WAIT(w)" "|" "DONE(d)")
-        (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-        (sequence "|" "CANCELED(c)")))
-
 ;; Enable logging of done tasks, and log stuff into the LOGBOOK drawer by
 (after! org
   (setq org-log-done 'time) ; timestamp added when marked done
   (setq org-log-into-drawer t)
   (setq org-agenda-files
-      (list (concat notes-home "/README.org")
-            (concat notes-home "/5am_club/index.org")
-            (concat notes-home "/5am_club/01_start.org")
-            (concat notes-home "/project_up/01_planner.org")
-            (concat notes-home "/snps/snps_task.org"))))
+        (directory-files-recursively notes-home "\\.org")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; LSP
