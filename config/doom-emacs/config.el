@@ -26,6 +26,8 @@
 (setq-default display-fill-column-indicator-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
+(xterm-mouse-mode 1)
+
 ;; kill-buffer with :q
 ;;(global-set-key [remap evil-quit] 'kill-buffer-and-window)
 
