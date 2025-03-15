@@ -20,16 +20,20 @@
 (setq doom-font (font-spec :family "IntelOne Mono" :size 18))
 
 (global-visual-line-mode t)  ;; Changeline if too long
-(setq display-line-numbers t)
+(setq display-line-numbers 'relative)
 
 ;; Column 80
 (setq-default display-fill-column-indicator-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
-(xterm-mouse-mode 1)
+(global-so-long-mode 1) ;; Avoid performance issues in large files
+(xterm-mouse-mode 1) ;; extern experience
 
 ;; kill-buffer with :q
 ;;(global-set-key [remap evil-quit] 'kill-buffer-and-window)
+
+;; tab
+(setq-default tab-width 4)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Appearence
@@ -39,13 +43,8 @@
 (setq default-frame-alist '((width . 100) (height . 40)))
 
 ;; Fonts and themes
-;(setq doom-theme 'catppuccin)
-;(setq doom-theme 'deeper-blue)
 ;(setq doom-theme 'doom-oceanic-next)
 ;(setq doom-theme 'modus-vivendi)
-;(setq doom-theme 'doom-homage-black)
-;(setq doom-theme 'doom-ir-black)
-;(setq doom-theme 'tango-dark)
 (setq doom-theme 'gruber-darker)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -96,9 +95,6 @@
 (setq read-process-output-max (* 4 1024 1024)) ;; 4mb
 ;;(setq lsp-idle-delay 0.500)
 (setq lsp-log-io nil) ; if set to true can cause a performance hit
-
-;; tab
-(setq-default tab-width 4)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
