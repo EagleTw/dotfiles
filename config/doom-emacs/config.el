@@ -9,25 +9,22 @@
 
 ;; For performance on SNPS machine
 (setq flycheck-check-syntax-automatically '(save))
-;(evil-escape-mode -1)
-;(remove-hook 'pre-command-hook #'evil-escape-pre-command-hook)
-;(remove-hook 'post-command-hook #'evil-escape-post-command-hook)
-;
+
+(global-so-long-mode 1) ;; Avoid performance issues in large files
+(xterm-mouse-mode 1)    ;; extern experience
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Text
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font setting
-(setq doom-font (font-spec :family "IntelOne Mono" :size 18))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 18))
 
 (global-visual-line-mode t)  ;; Changeline if too long
 (setq display-line-numbers 'relative)
 
 ;; Column 80
 (setq-default display-fill-column-indicator-column 80)
-(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
-
-(global-so-long-mode 1) ;; Avoid performance issues in large files
-(xterm-mouse-mode 1) ;; extern experience
+(global-display-fill-column-indicator-mode 1)
 
 ;; kill-buffer with :q
 ;;(global-set-key [remap evil-quit] 'kill-buffer-and-window)
