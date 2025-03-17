@@ -13,14 +13,22 @@
 (global-so-long-mode 1) ;; Avoid performance issues in large files
 (xterm-mouse-mode 1)    ;; extern experience
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((haskell . t)))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Text
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font setting
 (setq doom-font (font-spec :family "JetBrains Mono" :size 18))
 
-(global-visual-line-mode t)  ;; Changeline if too long
+;; Changeline if too long
+(global-visual-line-mode t)
+
 (setq display-line-numbers 'relative)
+(global-display-line-numbers-mode t)
 
 ;; Column 80
 (setq-default display-fill-column-indicator-column 80)
