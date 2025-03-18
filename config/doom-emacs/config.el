@@ -3,6 +3,11 @@
 (setq user-full-name "Yi-Ping Pan"
       user-mail-address "yipingp@outlook.com")
 
+(setq work-computer-p (string= (or (getenv "MYCOMPUTER") "") "WORK"))
+(if work-computer-p
+    (message "Running on WORK computer, using minimal setup")
+  (message "Running on HOME computer, using full setup"))
+
 ;; Gargadge collection threshold (default 8kb)
 (setq gc-cons-threshold 200 * 1024 * 1024       ;200mb
       gc-cons-percentage 0.6)
@@ -13,10 +18,10 @@
 (global-so-long-mode 1) ;; Avoid performance issues in large files
 (xterm-mouse-mode 1)    ;; extern experience
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((haskell . t)))
-
+(unless work-computer-p
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((haskell . t))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Text
@@ -27,8 +32,8 @@
 ;; Changeline if too long
 (global-visual-line-mode t)
 
-(setq display-line-numbers 'relative)
-(global-display-line-numbers-mode t)
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
 
 ;; Column 80
 (setq-default display-fill-column-indicator-column 80)
