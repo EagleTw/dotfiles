@@ -20,8 +20,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Performance Tweaks
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq gc-cons-threshold (* 200 1024 1024)  ; 200MB
-      gc-cons-percentage 0.6)
+;(setq gc-cons-threshold (* 200 1024 1024)  ; 200MB
+;      gc-cons-percentage 0.6)
+
+(setq gc-cons-threshold (* 100 1024 1024)) ;; Lower threshold for normal usage
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (setq gc-cons-threshold (* 50 1024 1024)))) ;; Reduce after startup
+
 
 ;; Performance improvements for large files & syntax checking
 (global-so-long-mode 1)  ;; Avoid performance issues in large files
@@ -33,6 +39,17 @@
 
 (after! evil-escape
   (setq evil-escape-key-sequence nil)) ;; Disable escape sequence detection
+
+(setq evil-esc-delay 0.001) ;; Reduce delay for ESC in terminal
+
+(after! company
+  (setq company-idle-delay 0.2)  ;; Reduce delay (default is 0.5s)
+  (setq company-minimum-prefix-length 2)  ;; Reduce completion overhead
+  (setq company-selection-wrap-around t))
+
+(after! flyspell
+  (add-hook 'prog-mode-hook (lambda () (flyspell-mode -1)))  ;; Disable in coding modes
+  (add-hook 'text-mode-hook 'flyspell-mode))  ;; Enable in text-related modes only
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; UI & Appearance
@@ -52,8 +69,8 @@
 (setq-default display-fill-column-indicator-column 80)
 (global-display-fill-column-indicator-mode 1)
 
-;; Enable soft word wrap (useful for prose writing)
-(global-visual-line-mode t)
+;; Enable soft word wrap in text modes
+(add-hook 'text-mode-hook #'visual-line-mode)
 
 ;; Remove GUI elements for minimal work setup
 (when work-computer-p
